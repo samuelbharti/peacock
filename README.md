@@ -6,8 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of peacock is to provide miscellaneous (for now) R scripts for
-project initialization and workflows.
+The goal of peacock is to …
 
 ## Installation
 
@@ -16,7 +15,7 @@ You can install the development version of peacock from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("uab-cgds-worthey/Peacock")
+devtools::install_github("samuelbharti/peacock")
 ```
 
 ## Example
