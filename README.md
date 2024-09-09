@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of peacock is to …
+The goal of peacock is to provide miscellaneous (for now) R scripts for
+project initialization and workflows.
 
 ## Installation
 
