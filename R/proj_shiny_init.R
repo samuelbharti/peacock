@@ -9,8 +9,9 @@
 #' @export
 proj_shiny_init <- function(path = getwd()){
 
+
   # Display a message before the prompt
-  cat("You current working directory is:\n")
+  cat("You current working directory will be:\n")
   cat(path)
 
   user_input <- tolower(
@@ -22,18 +23,24 @@ proj_shiny_init <- function(path = getwd()){
   # Check if the user input is 'y' or 'yes'
   if (user_input %in% c("y", "yes")) {
     wd_path <- path
+    dir.create(file.path(wd_path), recursive = TRUE,
+               showWarnings = FALSE)
     shiny_dir_comp <- c("www","data","modules",
                         "userInterface","R")
 
     shiny_file_comp <- c("ui.R","server.R",
                          "global.R", "Dockerfile",
                          "modules/test_mod.R",
+                         "userInterface/home_ui.R",
+                         "userInterface/other_ui.R",
+                         "R/load_components.R",
                          ".gitignore")
 
     #www_path <- file.path(wd_path,"www")
     www_contents <- c("css","img","js")
 
     global_con <- c("# Load libraries/ Source Files",
+                    "library(shiny)",
                     " ",
                     "# Load data/connections",
                     " ",
@@ -43,7 +50,7 @@ proj_shiny_init <- function(path = getwd()){
     ui_con <- c("navbarPage(",
                 "     'My app',",
                 "     tabPanel('Home', home_page),",
-                "     tabPanel('Other', other_tab),",
+                "     tabPanel('Other', other_page),",
                 ")"
     )
     server_con <- c("# Shiny Server",
@@ -76,6 +83,35 @@ proj_shiny_init <- function(path = getwd()){
                      ".Ruserdata"
     )
 
+    load_components <- c("# Load modules",
+                         "sapply(list.files('modules', full.names = TRUE), function(x) source(x))",
+                         "# Load user interface",
+                         "sapply(list.files('userInterface', full.names = TRUE), function(x) source(x))",
+                         " "
+                         )
+
+    home_userInterface <- c("home_page <- fluidPage(",
+                            "# Page title",
+                            "titlePanel('Home Page'),",
+                            "hr(),",
+                            "fluidRow(",
+                            "   column(6,h2('Column size 3')),",
+                            "   column(6,h2('Column size 3'))",
+                            " )",
+                            ")"
+                            )
+
+    other_userInterface <- c("other_page <- fluidPage(",
+                            "# Page title",
+                            "titlePanel('Other Page'),",
+                            "hr(),",
+                            "fluidRow(",
+                            "   column(6,h2('Column size 3')),",
+                            "   column(6,h2('Column size 3'))",
+                            " )",
+                            ")"
+    )
+
     # generate shiny project dir
     sapply(shiny_dir_comp, function(x) {
 
@@ -100,9 +136,11 @@ proj_shiny_init <- function(path = getwd()){
       aa <- file.path(wd_path,x)
       file.create(aa, showWarnings = FALSE)
 
+      # print("In file write function")
+      # print(aa)
       # Write to file
-      if(file.exists(x)){
-        fileConn <- file(x)
+      if(file.exists(aa)){
+        fileConn <- file(aa)
 
         if(x == "global.R"){
           y <- global_con
@@ -114,9 +152,18 @@ proj_shiny_init <- function(path = getwd()){
           y <- test_mod
         }else if(x == "Dockerfile"){
           y <- docker_con
+        }else if(x == "userInterface/home_ui.R"){
+          y <- home_userInterface
+        }else if(x == "userInterface/other_ui.R"){
+          y <- other_userInterface
+        }else if(x == "R/load_components.R"){
+          y <- load_components
         }else if(x == ".gitignore"){
           y <- git_ign_con
         }
+#
+#         print(x)
+#         print(y)
 
         writeLines(
           y,
