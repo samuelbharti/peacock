@@ -1,6 +1,9 @@
+.Rproj
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 dev.R
 test_install
+inst/doc
+docs
