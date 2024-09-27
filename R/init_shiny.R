@@ -7,7 +7,7 @@
 #' #proj_shiny_init()
 #'
 #' @export
-proj_shiny_init <- function(path = getwd()){
+init_shiny <- function(path = getwd()){
 
 
   # Display a message before the prompt
@@ -26,7 +26,7 @@ proj_shiny_init <- function(path = getwd()){
     dir.create(file.path(wd_path), recursive = TRUE,
                showWarnings = FALSE)
     shiny_dir_comp <- c("www","data","modules",
-                        "userInterface","R")
+                        "userInterface","R","dev")
 
     shiny_file_comp <- c("ui.R","server.R",
                          "global.R", "Dockerfile",
@@ -34,7 +34,8 @@ proj_shiny_init <- function(path = getwd()){
                          "userInterface/home_ui.R",
                          "userInterface/other_ui.R",
                          "R/load_components.R",
-                         ".gitignore")
+                         "dev/dev.R",
+                         ".gitignore", ".Renviron")
 
     #www_path <- file.path(wd_path,"www")
     www_contents <- c("css","img","js")
@@ -96,7 +97,7 @@ proj_shiny_init <- function(path = getwd()){
                             "hr(),",
                             "fluidRow(",
                             "   column(6,h2('Column size 3')),",
-                            "   column(6,h2('Column size 3'))",
+                            "   column(6,h2('Column size 6'))",
                             " )",
                             ")"
                             )
@@ -107,11 +108,17 @@ proj_shiny_init <- function(path = getwd()){
                             "hr(),",
                             "fluidRow(",
                             "   column(6,h2('Column size 3')),",
-                            "   column(6,h2('Column size 3'))",
+                            "   column(6,h2('Column size 6'))",
                             " )",
                             ")"
     )
 
+    dev_r <- c("# Use this script to test code blocks for app dev.",
+               "# Make sure to add this 'dev' directory",
+               "# in your gitignore after template initialization."
+               )
+
+    Renviron <- c("Delete this line and enter variables with secret keys/tokens etc.")
     # generate shiny project dir
     sapply(shiny_dir_comp, function(x) {
 
@@ -158,12 +165,13 @@ proj_shiny_init <- function(path = getwd()){
           y <- other_userInterface
         }else if(x == "R/load_components.R"){
           y <- load_components
+        }else if(x == "dev/dev.R"){
+          y <- dev_r
         }else if(x == ".gitignore"){
           y <- git_ign_con
+        }else if(x == ".Renviron"){
+          y <- Renviron
         }
-#
-#         print(x)
-#         print(y)
 
         writeLines(
           y,
@@ -174,6 +182,9 @@ proj_shiny_init <- function(path = getwd()){
       }
     }
     )
+    cat("Project initialized.\n")
+    cat("Please see documentation at:\n")
+    cat("https://www.samuelbharti.com/posts/r-shiny-template/")
   }
   else {
     cat("Project initialization canceled.\n")

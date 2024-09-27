@@ -4,10 +4,12 @@
 # peacock
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of peacock is to provide miscellaneous (for now) R scripts for
-project initialization and workflows.
+The goal of peacock is to provide functions for project initialization
+and workflows using pre-build templates. Templates available for R and R
+Shiny projects.
 
 ## Installation
 
@@ -26,8 +28,8 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(peacock)
 ## Initialize shiny project structure
-proj_shiny_init()
-#> You current working directory is:
+init_shiny()
+#> You current working directory will be:
 #> /Users/samuelbharti/Library/CloudStorage/OneDrive-UAB-TheUniversityofAlabamaatBirmingham/Work/packages/peacockDo you wish to create a project template here? (y/yes to confirm): 
 #> Project initialization canceled.
 ```
