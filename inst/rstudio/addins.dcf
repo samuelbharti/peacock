@@ -1,0 +1,8 @@
+Name: Peacock: Shiny Template
+Description: Shiny project with pre-defined structure and files
+Binding: init_shiny
+Interactive: true
+Params:
+  confirm: FALSE
+
+

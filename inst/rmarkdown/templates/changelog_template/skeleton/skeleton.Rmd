@@ -1,0 +1,25 @@
+---
+title: "[Project Name] Changelog"
+author: "Author Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+print(paste0("Last updated: ",Sys.time()))
+```
+
+------------------------------------------------------------------------
+
+# Project Introduction
+
+Write some project description
+
+------------------------------------------------------------------------
+
+YYYY-MM-DD John Doe
+
+-   Big Change 1
+-   Another Change 2 
+- 
+
