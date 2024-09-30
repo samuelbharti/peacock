@@ -11,10 +11,7 @@ print(paste0("Last updated: ",Sys.time()))
 
 ------------------------------------------------------------------------
 
-# Project Introduction
-
-Write some project description
-
+# CHANGELOG
 ------------------------------------------------------------------------
 
 YYYY-MM-DD John Doe
