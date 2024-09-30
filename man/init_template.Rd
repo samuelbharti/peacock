@@ -4,7 +4,7 @@
 \alias{init_template}
 \title{Initialize a template repository from GitHub Templates}
 \usage{
-init_template(template_name, path, confirm = FALSE)
+init_template(template_name, path, confirm = TRUE)
 }
 \arguments{
 \item{template_name}{Name of template. "shiny", "cgds"}

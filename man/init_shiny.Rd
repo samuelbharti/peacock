@@ -4,7 +4,7 @@
 \alias{init_shiny}
 \title{Initialize Shiny Project using this function}
 \usage{
-init_shiny(path = getwd(), confirm = FALSE)
+init_shiny(path = getwd(), confirm = TRUE)
 }
 \arguments{
 \item{path}{Path where shiny project template is created}

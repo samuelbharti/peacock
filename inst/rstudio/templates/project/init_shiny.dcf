@@ -1,4 +1,6 @@
 Binding: init_shiny
 Title: Peacock: Shiny Template
 Subtitle: Create a new Shiny app project
-Caption: Start a new Shiny project with pre-defined structure and files
+Caption: Shiny project with pre-defined structure and files
+Params:
+  confirm: FALSE
