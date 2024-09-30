@@ -7,17 +7,22 @@
 #' @export
 #'
 #' @examples
-init_template <- function(template_name, path) {
+#' init_template("shiny",getwd())
+init_template <- function(template_name, path, confirm = FALSE) {
 
   # Display a message before the prompt
   cat("You current working directory will be:\n")
   cat(path)
 
-  user_input <- tolower(
-    readline(
-      prompt = "Do you wish to create a project template here? (y/yes to confirm): "
+  if(confirm){
+    user_input <- "y"
+  }else{
+    user_input <- tolower(
+      readline(
+        prompt = "Do you wish to create a project template here? (y/yes to confirm): "
+      )
     )
-  )
+  }
 
   if (user_input %in% c("y", "yes")) {
 

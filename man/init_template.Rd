@@ -4,7 +4,7 @@
 \alias{init_template}
 \title{Initialize a template repository from GitHub Templates}
 \usage{
-init_template(template_name, path)
+init_template(template_name, path, confirm = FALSE)
 }
 \arguments{
 \item{template_name}{Name of template. "shiny", "cgds"}
@@ -16,4 +16,7 @@ Return project structure from selected github template at path specified.
 }
 \description{
 Initialize a template repository from GitHub Templates
+}
+\examples{
+init_template("shiny",getwd())
 }

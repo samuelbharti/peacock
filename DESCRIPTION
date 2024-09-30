@@ -15,5 +15,6 @@ Suggests:
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 Imports: 
-    lifecycle
+    lifecycle,
+    rstudioapi
 URL: http://www.samuelbharti.com/peacock/

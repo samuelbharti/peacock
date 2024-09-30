@@ -7,18 +7,23 @@
 #' #proj_shiny_init()
 #'
 #' @export
-init_shiny <- function(path = getwd()){
+init_shiny <- function(path = getwd(), confirm = FALSE){
 
 
   # Display a message before the prompt
   cat("You current working directory will be:\n")
   cat(path)
 
-  user_input <- tolower(
-    readline(
-    prompt = "Do you wish to create a project template here? (y/yes to confirm): "
+  if(confirm){
+    user_input <- "y"
+  }else{
+    user_input <- tolower(
+      readline(
+        prompt = "Do you wish to create a project template here? (y/yes to confirm): "
+      )
     )
-    )
+  }
+
 
   # Check if the user input is 'y' or 'yes'
   if (user_input %in% c("y", "yes")) {
