@@ -7,3 +7,4 @@ dev.R
 test_install
 inst/doc
 docs
+dev_untrack.R
