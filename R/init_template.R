@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' init_template("shiny",getwd())
-init_template <- function(template_name, path, confirm = TRUE) {
+init_template <- function(template_name, path = getwd(), confirm = TRUE) {
 
   # Display a message before the prompt
   cat("You current working directory will be:\n")
