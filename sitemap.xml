@@ -1,12 +1,14 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>https://www.samuelbharti.com/peacock/404.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/LICENSE-text.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/articles/index.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/articles/introduction.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/authors.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/index.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/reference/index.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/reference/init_shiny.html</loc></url>
-<url><loc>https://www.samuelbharti.com/peacock/reference/init_template.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/404.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/LICENSE-text.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/articles/index.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/articles/introduction.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/authors.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/index.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/reference/index.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/reference/init_changelog_md.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/reference/init_shiny.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/reference/init_template.html</loc></url>
+<url><loc>http://www.samuelbharti.com/peacock/reference/peacock-package.html</loc></url>
 </urlset>
 
