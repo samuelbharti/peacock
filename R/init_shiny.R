@@ -1,10 +1,13 @@
 #' Initialize Shiny Project using this function
 #'
 #' @param path  Path where shiny project template is created
+#' @param confirm Logical. If TRUE, prompts user for confirmation before creating template.
 #'
 #' @return Return shiny project file and directory template in current working directory.
 #' @examples
-#' #proj_shiny_init()
+#' \dontrun{
+#' init_shiny()
+#' }
 #'
 #' @export
 init_shiny <- function(path = getwd(), confirm = TRUE){
@@ -123,7 +126,7 @@ init_shiny <- function(path = getwd(), confirm = TRUE){
                "# in your gitignore after template initialization."
                )
 
-    Renviron <- c("Delete this line and enter variables with secret keys/tokens etc.")
+    Renviron <- c("#Delete this line and enter variables with secret keys/tokens etc.")
     # generate shiny project dir
     sapply(shiny_dir_comp, function(x) {
 

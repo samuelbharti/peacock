@@ -4,14 +4,16 @@
 \name{peacock-package}
 \alias{peacock}
 \alias{peacock-package}
-\title{peacock: R Project initialization by template.}
+\title{peacock: Quick Project Initialization with Templates}
 \description{
-Initialize project directory structures using pre-build templates for R Shiny and R projects.
+Streamline project setup by initializing directory structures with pre-configured templates. Create Shiny applications, research projects, and tool comparison studies with organized folders and starter files. Stop recreating the same structure manually and start coding faster.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{http://www.samuelbharti.com/peacock/}
+  \item \url{https://github.com/samuelbharti/peacock}
+  \item Report bugs at \url{https://github.com/samuelbharti/peacock/issues}
 }
 
 }

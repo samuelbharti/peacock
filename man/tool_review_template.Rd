@@ -15,7 +15,7 @@ tool_review_template(tool_name, tool_url, path = getwd(), confirm = TRUE, ...)
 
 \item{confirm}{User confirmation enable for setup}
 
-\item{...}{}
+\item{...}{Additional arguments (currently unused)}
 }
 \value{
 Return project structure in specified directory
@@ -24,5 +24,7 @@ Return project structure in specified directory
 Initialize a project directory structure for tool review
 }
 \examples{
+\dontrun{
 tool_review_template("abc","www.abc.com")
+}
 }

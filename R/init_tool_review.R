@@ -4,13 +4,15 @@
 #' @param tool_url A vector of corresponding tool URLs
 #' @param path Path to initial project directory
 #' @param confirm User confirmation enable for setup
-#' @param ...
+#' @param ... Additional arguments (currently unused)
 #'
 #' @return Return project structure in specified directory
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' tool_review_template("abc","www.abc.com")
+#' }
 tool_review_template <- function(tool_name, tool_url, path = getwd(),
                                  confirm = TRUE, ...){
 
@@ -32,7 +34,7 @@ tool_review_template <- function(tool_name, tool_url, path = getwd(),
 
     if(length(tool_name) != length(tool_url)){
       print("Please provide URL or Empty qoutes for Each tool")
-      break;
+      return(invisible(NULL))
     }
 
     base_dir <- c("src","data","notebooks","configs","out","docs")

@@ -10,6 +10,8 @@ init_template(template_name, path = getwd(), confirm = TRUE)
 \item{template_name}{Name of template. "shiny", "cgds"}
 
 \item{path}{Path where project template will be created.}
+
+\item{confirm}{Logical. If TRUE, prompts user for confirmation before creating template.}
 }
 \value{
 Return project structure from selected github template at path specified.
@@ -18,5 +20,8 @@ Return project structure from selected github template at path specified.
 Initialize a template repository from GitHub Templates
 }
 \examples{
+\dontrun{
 init_template("shiny",getwd())
 }
+}
+\keyword{internal}
