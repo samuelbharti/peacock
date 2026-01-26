@@ -57,24 +57,108 @@
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of peacock is to provide functions for project initialization and workflows using pre-build templates. Templates available for R and R Shiny projects.</p>
+<p>peacock helps you quickly set up new R projects with pre-configured directory structures and files. Stop creating the same folders and files manually every time you start a project. Just run a function and get working.</p>
+<div class="section level2">
+<h2 id="why-peacock">Why peacock?<a class="anchor" aria-label="anchor" href="#why-peacock"></a>
+</h2>
+<p>When starting a new project, you probably find yourself:</p>
+<ul>
+<li>Creating the same folders over and over (data, scripts, outputs)</li>
+<li>Setting up Shiny apps with the same basic structure</li>
+<li>Writing boilerplate code for UI, server, and global files</li>
+<li>Manually organizing files for reproducible research</li>
+</ul>
+<p>peacock automates this. It gives you clean, organized project templates so you can start coding immediately.</p>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of peacock from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>Install from GitHub:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"samuelbharti/peacock"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="what-can-peacock-do">What can peacock do?<a class="anchor" aria-label="anchor" href="#what-can-peacock-do"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<div class="section level3">
+<h3 id="id_1-initialize-a-shiny-app-structure">1. Initialize a Shiny app structure<a class="anchor" aria-label="anchor" href="#id_1-initialize-a-shiny-app-structure"></a>
+</h3>
+<p>Creates a complete Shiny app with organized folders and starter files.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.samuelbharti.com/peacock/">peacock</a></span><span class="op">)</span></span>
-<span><span class="co">## Initialize shiny project structure</span></span>
-<span><span class="fu"><a href="reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Project initialized.</span></span></code></pre></div>
+<span></span>
+<span><span class="co"># Set up a new Shiny project</span></span>
+<span><span class="fu"><a href="reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_shiny_app"</span><span class="op">)</span></span></code></pre></div>
+<p>This creates: - <code>ui.R</code>, <code>server.R</code>, <code>global.R</code> - Your main Shiny files - <code>modules/</code> - For modular Shiny components - <code>userInterface/</code> - UI components organized separately - <code>www/</code> - Static files (CSS, images, JavaScript) - <code>data/</code>, <code>R/</code>, <code>dev/</code> - Standard project folders - <code>Dockerfile</code> - Ready for containerization - <code>.gitignore</code> and <code>.Renviron</code> - Project configuration</p>
+</div>
+<div class="section level3">
+<h3 id="id_2-create-a-changelog">2. Create a changelog<a class="anchor" aria-label="anchor" href="#id_2-create-a-changelog"></a>
+</h3>
+<p>Track project changes in a structured markdown file.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/init_changelog_md.html">init_changelog_md</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_project"</span><span class="op">)</span></span></code></pre></div>
+<p>Creates a <code>CHANGELOG.md</code> file with a simple format for documenting your work.</p>
+</div>
+<div class="section level3">
+<h3 id="id_3-use-github-templates">3. Use GitHub templates<a class="anchor" aria-label="anchor" href="#id_3-use-github-templates"></a>
+</h3>
+<p>Pull down complete project templates from GitHub repositories.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Initialize from a Shiny template</span></span>
+<span><span class="fu"><a href="reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"shiny"</span>, path <span class="op">=</span> <span class="st">"my_project"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Initialize from a CGDS research template</span></span>
+<span><span class="fu"><a href="reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"cgds"</span>, path <span class="op">=</span> <span class="st">"research_project"</span><span class="op">)</span></span></code></pre></div>
+<p>The CGDS template is part of the <a href="https://github.com/uab-cgds-worthey/cgds_repo_template" class="external-link">UAB CGDS research workflow</a>.</p>
+</div>
+<div class="section level3">
+<h3 id="id_4-set-up-tool-review-projects">4. Set up tool review projects<a class="anchor" aria-label="anchor" href="#id_4-set-up-tool-review-projects"></a>
+</h3>
+<p>Organize projects that compare multiple tools or methods.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/tool_review_template.html">tool_review_template</a></span><span class="op">(</span></span>
+<span>  tool_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"tool1"</span>, <span class="st">"tool2"</span>, <span class="st">"tool3"</span><span class="op">)</span>,</span>
+<span>  tool_url <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://tool1.com"</span>, <span class="st">"https://tool2.com"</span>, <span class="st">"https://tool3.com"</span><span class="op">)</span>,</span>
+<span>  path <span class="op">=</span> <span class="st">"tool_comparison"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>This creates organized folders for data, scripts, outputs, and documentation for each tool.</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="rstudio-integration">RStudio Integration<a class="anchor" aria-label="anchor" href="#rstudio-integration"></a>
+</h2>
+<p>Once installed, peacock adds an RStudio Add-in for quick access: - Find “Peacock: Shiny Template” in the Addins menu - Or create a new project and select “Peacock: Shiny Template” from the templates</p>
+</div>
+<div class="section level2">
+<h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
+</h2>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.samuelbharti.com/peacock/">peacock</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a new Shiny app in the current directory</span></span>
+<span><span class="fu"><a href="reference/init_shiny.html">init_shiny</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Or specify a path</span></span>
+<span><span class="fu"><a href="reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"path/to/new/project"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<p>Set <code>confirm = FALSE</code> to skip the confirmation prompt (useful for scripting).</p>
+</div>
+<div class="section level2">
+<h2 id="learn-more">Learn more<a class="anchor" aria-label="anchor" href="#learn-more"></a>
+</h2>
+<ul>
+<li>Full documentation: <a href="http://www.samuelbharti.com/peacock/" class="uri">http://www.samuelbharti.com/peacock/</a>
+</li>
+<li>Vignette: <code><a href="articles/introduction.html">vignette("introduction")</a></code>
+</li>
+<li>Issues and feedback: <a href="https://github.com/samuelbharti/peacock/issues" class="external-link uri">https://github.com/samuelbharti/peacock/issues</a>
+</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
+<p>GPL-3</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
