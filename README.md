@@ -7,27 +7,114 @@
 
 <!-- badges: end -->
 
-The goal of peacock is to provide functions for project initialization
-and workflows using pre-build templates. Templates available for R and R
-Shiny projects.
+peacock helps you quickly set up new R projects with pre-configured directory structures and files. Stop creating the same folders and files manually every time you start a project. Just run a function and get working.
+
+## Why peacock?
+
+When starting a new project, you probably find yourself:
+
+- Creating the same folders over and over (data, scripts, outputs)
+- Setting up Shiny apps with the same basic structure
+- Writing boilerplate code for UI, server, and global files
+- Manually organizing files for reproducible research
+
+peacock automates this. It gives you clean, organized project templates so you can start coding immediately.
 
 ## Installation
 
-You can install the development version of peacock from
-[GitHub](https://github.com/) with:
+Install from GitHub:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("samuelbharti/peacock")
 ```
 
-## Example
+## What can peacock do?
 
-This is a basic example which shows you how to solve a common problem:
+### 1. Initialize a Shiny app structure
+
+Creates a complete Shiny app with organized folders and starter files.
 
 ``` r
 library(peacock)
-## Initialize shiny project structure
-init_shiny(confirm = FALSE)
-#> Project initialized.
+
+# Set up a new Shiny project
+init_shiny(path = "my_shiny_app")
 ```
+
+This creates:
+- `ui.R`, `server.R`, `global.R` - Your main Shiny files
+- `modules/` - For modular Shiny components
+- `userInterface/` - UI components organized separately
+- `www/` - Static files (CSS, images, JavaScript)
+- `data/`, `R/`, `dev/` - Standard project folders
+- `Dockerfile` - Ready for containerization
+- `.gitignore` and `.Renviron` - Project configuration
+
+### 2. Create a changelog
+
+Track project changes in a structured markdown file.
+
+``` r
+init_changelog_md(path = "my_project")
+```
+
+Creates a `CHANGELOG.md` file with a simple format for documenting your work.
+
+### 3. Use GitHub templates
+
+Pull down complete project templates from GitHub repositories.
+
+``` r
+# Initialize from a Shiny template
+init_template("shiny", path = "my_project")
+
+# Initialize from a CGDS research template
+init_template("cgds", path = "research_project")
+```
+
+The CGDS template is part of the [UAB CGDS research workflow](https://github.com/uab-cgds-worthey/cgds_repo_template).
+
+### 4. Set up tool review projects
+
+Organize projects that compare multiple tools or methods.
+
+``` r
+tool_review_template(
+  tool_name = c("tool1", "tool2", "tool3"),
+  tool_url = c("https://tool1.com", "https://tool2.com", "https://tool3.com"),
+  path = "tool_comparison"
+)
+```
+
+This creates organized folders for data, scripts, outputs, and documentation for each tool.
+
+## RStudio Integration
+
+Once installed, peacock adds an RStudio Add-in for quick access:
+- Find "Peacock: Shiny Template" in the Addins menu
+- Or create a new project and select "Peacock: Shiny Template" from the templates
+
+## Quick start
+
+``` r
+library(peacock)
+
+# Create a new Shiny app in the current directory
+init_shiny()
+
+# Or specify a path
+init_shiny(path = "path/to/new/project", confirm = FALSE)
+```
+
+Set `confirm = FALSE` to skip the confirmation prompt (useful for scripting).
+
+## Learn more
+
+- Full documentation: http://www.samuelbharti.com/peacock/
+- Vignette: `vignette("introduction")`
+- Issues and feedback: https://github.com/samuelbharti/peacock/issues
+
+## License
+
+GPL-3
