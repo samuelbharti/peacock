@@ -1,0 +1,44 @@
+# peacock
+
+The goal of peacock is to provide functions for project initialization
+and workflows using pre-build templates. Templates available for R and R
+Shiny projects.
+
+## Installation
+
+You can install the development version of peacock from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("samuelbharti/peacock")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(peacock)
+## Initialize shiny project structure
+init_shiny(confirm = FALSE)
+#> Project initialized.
+```
+
+# Package index
+
+## All functions
+
+- [`init_changelog_md()`](http://www.samuelbharti.com/peacock/reference/init_changelog_md.md)
+  : A changelog markdown template to document project progress
+- [`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md)
+  : Initialize Shiny Project using this function
+- [`tool_review_template()`](http://www.samuelbharti.com/peacock/reference/tool_review_template.md)
+  : Initialize a project directory structure for tool review
+
+# Articles
+
+### All vignettes
+
+- [Getting Started with
+  peacock](http://www.samuelbharti.com/peacock/articles/introduction.md):

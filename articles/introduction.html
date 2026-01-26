@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>introduction • peacock</title>
+<title>Getting Started with peacock • peacock</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="introduction">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting Started with peacock">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -33,14 +33,16 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/introduction.html">introduction</a></li>
+<li><a class="dropdown-item" href="../articles/introduction.html">Getting Started with peacock</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/samuelbharti/peacock/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -54,10 +56,10 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
-      <h1>introduction</h1>
+      <h1>Getting Started with peacock</h1>
             
       
-
+      <small class="dont-index">Source: <a href="https://github.com/samuelbharti/peacock/blob/main/vignettes/introduction.Rmd" class="external-link"><code>vignettes/introduction.Rmd</code></a></small>
       <div class="d-none name"><code>introduction.Rmd</code></div>
     </div>
 
@@ -65,7 +67,287 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.samuelbharti.com/peacock/">peacock</a></span><span class="op">)</span></span></code></pre></div>
-  </main>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<p>peacock is a simple package that helps you start new R projects
+quickly. Instead of manually creating folders and files every time,
+peacock sets them up for you with sensible defaults.</p>
+<p>This guide shows you how to use each function in the package.</p>
+</div>
+<div class="section level2">
+<h2 id="core-philosophy">Core Philosophy<a class="anchor" aria-label="anchor" href="#core-philosophy"></a>
+</h2>
+<p>peacock follows three principles:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Start fast</strong> - Get a working project structure in
+seconds</li>
+<li>
+<strong>Stay organized</strong> - Pre-configured folders keep your
+work tidy</li>
+<li>
+<strong>Work your way</strong> - Modify templates to fit your
+workflow</li>
+</ol>
+</div>
+<div class="section level2">
+<h2 id="function-overview">Function Overview<a class="anchor" aria-label="anchor" href="#function-overview"></a>
+</h2>
+<p>peacock provides four main functions:</p>
+<ul>
+<li>
+<code><a href="../reference/init_shiny.html">init_shiny()</a></code> - Create a Shiny app structure</li>
+<li>
+<code><a href="../reference/init_template.html">init_template()</a></code> - Pull GitHub project templates</li>
+<li>
+<code><a href="../reference/init_changelog_md.html">init_changelog_md()</a></code> - Add a changelog file</li>
+<li>
+<code><a href="../reference/tool_review_template.html">tool_review_template()</a></code> - Set up tool comparison
+projects</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="setting-up-a-shiny-app">Setting up a Shiny App<a class="anchor" aria-label="anchor" href="#setting-up-a-shiny-app"></a>
+</h2>
+<p>The most common use case is starting a new Shiny application.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Create a Shiny app in the current directory</span></span>
+<span><span class="fu"><a href="../reference/init_shiny.html">init_shiny</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create in a specific location</span></span>
+<span><span class="fu"><a href="../reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/projects/my_dashboard"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Skip confirmation prompt (useful in scripts)</span></span>
+<span><span class="fu"><a href="../reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/projects/my_dashboard"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="what-gets-created">What gets created?<a class="anchor" aria-label="anchor" href="#what-gets-created"></a>
+</h3>
+<p>When you run <code><a href="../reference/init_shiny.html">init_shiny()</a></code>, you get:</p>
+<p><strong>Main files:</strong> - <code>ui.R</code> - User interface
+definition with navbar structure - <code>server.R</code> - Server logic
+(empty but ready to use) - <code>global.R</code> - Load libraries, data,
+and shared objects</p>
+<p><strong>Organized folders:</strong> - <code>modules/</code> - Modular
+Shiny components (includes example module) - <code>userInterface/</code>
+- UI components split by page - <code>R/</code> - Helper functions and
+utilities - <code>www/</code> - Static assets (CSS, JavaScript, images)
+- <code>data/</code> - Data files - <code>dev/</code> - Development
+scripts</p>
+<p><strong>Configuration:</strong> - <code>Dockerfile</code> - Ready for
+deployment - <code>.gitignore</code> - Pre-configured for R projects -
+<code>.Renviron</code> - Environment variables</p>
+</div>
+<div class="section level3">
+<h3 id="example-workflow">Example workflow<a class="anchor" aria-label="anchor" href="#example-workflow"></a>
+</h3>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1. Initialize your project</span></span>
+<span><span class="fu"><a href="../reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/my_app"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2. Change to that directory</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="st">"~/my_app"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 3. Start editing files</span></span>
+<span><span class="co"># Open ui.R, server.R, global.R and start coding</span></span>
+<span></span>
+<span><span class="co"># 4. Run your app</span></span>
+<span><span class="fu">shiny</span><span class="fu">::</span><span class="fu">runApp</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="using-github-templates">Using GitHub Templates<a class="anchor" aria-label="anchor" href="#using-github-templates"></a>
+</h2>
+<p>If you have complete project templates on GitHub, pull them down with
+<code><a href="../reference/init_template.html">init_template()</a></code>.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Use the built-in Shiny template</span></span>
+<span><span class="fu"><a href="../reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"shiny"</span>, path <span class="op">=</span> <span class="st">"~/projects/new_shiny_app"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Use the CGDS research template</span></span>
+<span><span class="fu"><a href="../reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"cgds"</span>, path <span class="op">=</span> <span class="st">"~/research/new_study"</span><span class="op">)</span></span></code></pre></div>
+<p>This downloads the template, extracts it, and sets it up in your
+chosen directory. The function automatically cleans up temporary
+files.</p>
+<div class="section level3">
+<h3 id="available-templates">Available templates<a class="anchor" aria-label="anchor" href="#available-templates"></a>
+</h3>
+<p>Currently includes:</p>
+<ul>
+<li>
+<code>"shiny"</code> - Full-featured Shiny application template</li>
+<li>
+<code>"cgds"</code> - Research project template from UAB CGDS</li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2 id="tracking-changes">Tracking Changes<a class="anchor" aria-label="anchor" href="#tracking-changes"></a>
+</h2>
+<p>Keep a log of what you’ve done with
+<code><a href="../reference/init_changelog_md.html">init_changelog_md()</a></code>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Add a changelog to your project</span></span>
+<span><span class="fu"><a href="../reference/init_changelog_md.html">init_changelog_md</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/my_project"</span><span class="op">)</span></span></code></pre></div>
+<p>This creates <code>CHANGELOG.md</code> with this structure:</p>
+<pre><code># CHANGELOG
+
+``` txt
+YYYY-MM-DD  John Doe
+
+* Big Change 1
+* Another Change 2</code></pre>
+<pre><code>
+Replace the template content with your actual changes. This is helpful for:
+
+- Documenting what you did and when
+- Sharing progress with collaborators
+- Remembering why you made certain decisions
+
+## Comparing Multiple Tools
+
+When you need to evaluate several tools or methods, `tool_review_template()` creates an organized structure.
+
+
+``` r
+# Compare three bioinformatics tools
+tool_review_template(
+  tool_name = c("STAR", "HISAT2", "Salmon"),
+  tool_url = c(
+    "https://github.com/alexdobin/STAR",
+    "http://daehwankimlab.github.io/hisat2/",
+    "https://github.com/COMBINE-lab/salmon"
+  ),
+  path = "~/research/rna_seq_comparison"
+)</code></pre>
+<div class="section level3">
+<h3 id="what-gets-created-1">What gets created?<a class="anchor" aria-label="anchor" href="#what-gets-created-1"></a>
+</h3>
+<p>The function builds this structure:</p>
+<pre><code>project/
+├── src/                    # Scripts for each tool
+│   ├── STAR.R
+│   ├── HISAT2.R
+│   └── Salmon.R
+├── data/
+│   ├── shared/            # Input data used by all tools
+│   ├── preprocessed/      # One folder per tool
+│   │   ├── STAR/
+│   │   ├── HISAT2/
+│   │   └── Salmon/
+│   └── other/
+├── notebooks/             # Analysis notebooks
+├── configs/               # Configuration files
+├── out/                   # One folder per tool for outputs
+│   ├── STAR/
+│   ├── HISAT2/
+│   └── Salmon/
+└── docs/                  # Documentation and reports</code></pre>
+<p>Each R script in <code>src/</code> includes comments with the tool
+name and URL.</p>
+</div>
+<div class="section level3">
+<h3 id="example-use-case">Example use case<a class="anchor" aria-label="anchor" href="#example-use-case"></a>
+</h3>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Set up the comparison</span></span>
+<span><span class="fu"><a href="../reference/tool_review_template.html">tool_review_template</a></span><span class="op">(</span></span>
+<span>  tool_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"method_a"</span>, <span class="st">"method_b"</span><span class="op">)</span>,</span>
+<span>  tool_url <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"https://method-b.com"</span><span class="op">)</span>,</span>
+<span>  path <span class="op">=</span> <span class="st">"~/comparison"</span>,</span>
+<span>  confirm <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Navigate and start working</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="st">"~/comparison"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Put shared data in data/shared/</span></span>
+<span><span class="co"># Edit scripts in src/</span></span>
+<span><span class="co"># Run analyses and save outputs to out/method_a/ and out/method_b/</span></span>
+<span><span class="co"># Document findings in docs/</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="tips-and-tricks">Tips and Tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
+</h2>
+<div class="section level3">
+<h3 id="skip-confirmations-in-scripts">Skip confirmations in scripts<a class="anchor" aria-label="anchor" href="#skip-confirmations-in-scripts"></a>
+</h3>
+<p>All functions have a <code>confirm</code> parameter. Set it to
+<code>FALSE</code> when using peacock in automated scripts:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"auto_project"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="customize-after-creation">Customize after creation<a class="anchor" aria-label="anchor" href="#customize-after-creation"></a>
+</h3>
+<p>Templates are starting points. After running a peacock function:</p>
+<ul>
+<li>Delete folders you don’t need</li>
+<li>Add new ones that fit your workflow</li>
+<li>Modify the generated files</li>
+<li>Save your own version as a GitHub template</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="use-with-rstudio-projects">Use with RStudio Projects<a class="anchor" aria-label="anchor" href="#use-with-rstudio-projects"></a>
+</h3>
+<p>Peacock works great with RStudio Projects:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1. Create the structure</span></span>
+<span><span class="fu"><a href="../reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/my_project"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2. Create an RStudio Project</span></span>
+<span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu">initializeProject</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/my_project"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 3. Open it</span></span>
+<span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu">openProject</span><span class="op">(</span><span class="st">"~/my_project"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="combine-functions">Combine functions<a class="anchor" aria-label="anchor" href="#combine-functions"></a>
+</h3>
+<p>You can use multiple peacock functions in one project:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Initialize with a template</span></span>
+<span><span class="fu"><a href="../reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"shiny"</span>, path <span class="op">=</span> <span class="st">"~/my_app"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Add a changelog</span></span>
+<span><span class="fu"><a href="../reference/init_changelog_md.html">init_changelog_md</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"~/my_app"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="common-questions">Common Questions<a class="anchor" aria-label="anchor" href="#common-questions"></a>
+</h2>
+<p><strong>Q: Can I modify the templates?</strong></p>
+<p>Yes. The files created are normal files on your computer. Change them
+however you want. If you create a template you like, consider making it
+a GitHub repository and using <code><a href="../reference/init_template.html">init_template()</a></code> to reuse
+it.</p>
+<p><strong>Q: What if I want different folder names?</strong></p>
+<p>After running a peacock function, rename folders as needed. Or fork
+the package and modify the templates to your preferences.</p>
+<p><strong>Q: Do I need to use all the folders created?</strong></p>
+<p>No. Delete what you don’t need. The templates provide structure for
+common cases, but your project might not need everything.</p>
+<p><strong>Q: Can I contribute new templates?</strong></p>
+<p>Yes. Open an issue or pull request on GitHub to discuss adding new
+templates.</p>
+</div>
+<div class="section level2">
+<h2 id="next-steps">Next Steps<a class="anchor" aria-label="anchor" href="#next-steps"></a>
+</h2>
+<p>Now that you know how peacock works:</p>
+<ol style="list-style-type: decimal">
+<li>Try creating a test project with <code><a href="../reference/init_shiny.html">init_shiny()</a></code>
+</li>
+<li>Look at the generated files to understand the structure</li>
+<li>Customize it for your needs</li>
+<li>Use peacock to start your next real project</li>
+</ol>
+<p>For more examples and updates, visit: <a href="http://www.samuelbharti.com/peacock/" class="uri">http://www.samuelbharti.com/peacock/</a></p>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
@@ -75,7 +357,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
