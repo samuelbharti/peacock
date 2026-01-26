@@ -28,8 +28,6 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(peacock)
 ## Initialize shiny project structure
-init_shiny()
-#> You current working directory will be:
-#> /Users/samuelbharti/Library/CloudStorage/OneDrive-UAB-TheUniversityofAlabamaatBirmingham/Work/packages/peacockDo you wish to create a project template here? (y/yes to confirm): 
-#> Project initialization canceled.
+init_shiny(confirm = FALSE)
+#> Project initialized.
 ```

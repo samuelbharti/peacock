@@ -2,12 +2,17 @@
 #'
 #' @param template_name Name of template. "shiny", "cgds"
 #' @param path Path where project template will be created.
+#' @param confirm Logical. If TRUE, prompts user for confirmation before creating template.
 #'
 #' @return Return project structure from selected github template at path specified.
+#' @importFrom utils download.file unzip
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' init_template("shiny",getwd())
+#' }
+#' @keywords internal
 init_template <- function(template_name, path = getwd(), confirm = TRUE) {
 
   # Display a message before the prompt

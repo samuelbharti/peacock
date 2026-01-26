@@ -8,6 +8,8 @@ init_shiny(path = getwd(), confirm = TRUE)
 }
 \arguments{
 \item{path}{Path where shiny project template is created}
+
+\item{confirm}{Logical. If TRUE, prompts user for confirmation before creating template.}
 }
 \value{
 Return shiny project file and directory template in current working directory.
@@ -16,6 +18,8 @@ Return shiny project file and directory template in current working directory.
 Initialize Shiny Project using this function
 }
 \examples{
-#proj_shiny_init()
+\dontrun{
+init_shiny()
+}
 
 }
