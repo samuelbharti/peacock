@@ -1,6 +1,6 @@
 #' Initialize a template repository from GitHub Templates
 #'
-#' @param template_name Name of template. "shiny", "cgds"
+#' @param template_name Name of template, one of "shiny" or "cgds". Defaults to "shiny".
 #' @param path Path where project template will be created.
 #' @param confirm Logical. If TRUE, prompts user for confirmation before creating template.
 #'
@@ -13,7 +13,13 @@
 #' init_template("shiny",getwd())
 #' }
 #' @keywords internal
-init_template <- function(template_name, path = getwd(), confirm = TRUE) {
+init_template <- function(
+  template_name = c("shiny", "cgds"),
+  path = getwd(),
+  confirm = TRUE
+) {
+  template_name <- match.arg(template_name)
+
   # Display a message before the prompt
   cat("You current working directory will be:\n")
   cat(path)
