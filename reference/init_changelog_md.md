@@ -25,8 +25,7 @@ Return markdown file in specified or current working directory
 ## Examples
 
 ``` r
-init_changelog_md()
+init_changelog_md(path = tempdir(), confirm = FALSE)
 #> You current working directory will be:
-#> /home/runner/work/peacock/peacock/docs/referenceDo you wish to create a Change log MD here? (y/yes to confirm): 
-#> Change log MD initialization canceled.
+#> /tmp/RtmpRlYl1I
 ```
