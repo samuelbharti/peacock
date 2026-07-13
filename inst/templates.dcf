@@ -1,0 +1,11 @@
+Name: shiny
+Repo: samuelbharti/RShiny_template
+Ref: HEAD
+DocURL: https://www.samuelbharti.com/posts/r-shiny-template/
+Description: Full-featured Shiny application template
+
+Name: cgds
+Repo: uab-cgds-worthey/cgds_repo_template
+Ref: HEAD
+DocURL: https://github.com/uab-cgds-worthey/cgds_repo_template
+Description: UAB CGDS research project template

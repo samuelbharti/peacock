@@ -2,25 +2,43 @@
 % Please edit documentation in R/init_template.R
 \name{init_template}
 \alias{init_template}
-\title{Initialize a template repository from GitHub Templates}
+\title{Initialize a project from a GitHub template repository}
 \usage{
-init_template(template_name = c("shiny", "cgds"), path = getwd(), confirm = TRUE)
+init_template(
+  template_name = "shiny",
+  path = getwd(),
+  ref = NULL,
+  registry = NULL,
+  confirm = TRUE
+)
 }
 \arguments{
-\item{template_name}{Name of template, one of "shiny" or "cgds". Defaults to "shiny".}
+\item{template_name}{A built-in template name (e.g. \code{"shiny"}, \code{"cgds"}), or a
+GitHub repository as \code{"owner/repo"} / \code{"owner/repo@ref"}. Defaults to \code{"shiny"}.}
 
-\item{path}{Path where project template will be created.}
+\item{path}{Path where the project template will be created.}
 
-\item{confirm}{Logical. If TRUE, prompts user for confirmation before creating template.}
+\item{ref}{Optional branch, tag, or commit to download. Overrides an \code{@ref}
+given in \code{template_name}. Defaults to the template's registry ref, or the
+repository's default branch (\code{HEAD}).}
+
+\item{registry}{Optional path to a custom registry file (DCF or YAML); see
+\code{\link[=peacock_templates]{peacock_templates()}}. Defaults to the registry bundled with peacock.}
+
+\item{confirm}{Logical. If TRUE, prompts for confirmation before creating the
+template (interactive sessions only).}
 }
 \value{
-Return project structure from selected github template at path specified.
+Invisibly, the \code{path} the template was created in.
 }
 \description{
-Initialize a template repository from GitHub Templates
+Downloads a template repository from GitHub and unpacks it into \code{path}. The
+template can be a built-in name (see \code{\link[=peacock_templates]{peacock_templates()}}) or any GitHub
+repository given as \code{"owner/repo"} or \code{"owner/repo@ref"}.
 }
 \examples{
 \dontrun{
-init_template("shiny",getwd())
+init_template("shiny")
+init_template("owner/repo@dev", path = tempdir())
 }
 }

@@ -1,23 +1,37 @@
-#' Initialize a template repository from GitHub Templates
+#' Initialize a project from a GitHub template repository
 #'
-#' @param template_name Name of template, one of "shiny" or "cgds". Defaults to "shiny".
-#' @param path Path where project template will be created.
-#' @param confirm Logical. If TRUE, prompts user for confirmation before creating template.
+#' Downloads a template repository from GitHub and unpacks it into `path`. The
+#' template can be a built-in name (see [peacock_templates()]) or any GitHub
+#' repository given as `"owner/repo"` or `"owner/repo@ref"`.
 #'
-#' @return Return project structure from selected github template at path specified.
+#' @param template_name A built-in template name (e.g. `"shiny"`, `"cgds"`), or a
+#'   GitHub repository as `"owner/repo"` / `"owner/repo@ref"`. Defaults to `"shiny"`.
+#' @param path Path where the project template will be created.
+#' @param ref Optional branch, tag, or commit to download. Overrides an `@ref`
+#'   given in `template_name`. Defaults to the template's registry ref, or the
+#'   repository's default branch (`HEAD`).
+#' @param registry Optional path to a custom registry file (DCF or YAML); see
+#'   [peacock_templates()]. Defaults to the registry bundled with peacock.
+#' @param confirm Logical. If TRUE, prompts for confirmation before creating the
+#'   template (interactive sessions only).
+#'
+#' @return Invisibly, the `path` the template was created in.
 #' @importFrom utils download.file unzip
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' init_template("shiny",getwd())
+#' init_template("shiny")
+#' init_template("owner/repo@dev", path = tempdir())
 #' }
 init_template <- function(
-  template_name = c("shiny", "cgds"),
+  template_name = "shiny",
   path = getwd(),
+  ref = NULL,
+  registry = NULL,
   confirm = TRUE
 ) {
-  template_name <- match.arg(template_name)
+  resolved <- resolve_template(template_name, ref = ref, registry = registry)
 
   # Display a message before the prompt
   cat("Your current working directory will be:\n")
@@ -36,16 +50,14 @@ init_template <- function(
   if (user_input %in% c("y", "yes")) {
     dest_dir <- path
 
-    if (template_name == "shiny") {
-      repo_url <- "https://github.com/samuelbharti/RShiny_template"
-      doc_url <- "https://www.samuelbharti.com/posts/r-shiny-template/"
-    } else if (template_name == "cgds") {
-      repo_url <- "https://github.com/uab-cgds-worthey/cgds_repo_template"
-      doc_url <- repo_url
-    }
-
-    # Modify the GitHub repo URL to point to the ZIP file
-    zip_url <- paste0(repo_url, "/archive/refs/heads/main.zip")
+    # Build the GitHub archive URL for the resolved repo and ref.
+    zip_url <- paste0(
+      "https://github.com/",
+      resolved$repo,
+      "/archive/",
+      resolved$ref,
+      ".zip"
+    )
 
     # Define the path where the ZIP file will be saved
     temp_dir <- file.path(paste0(dest_dir, "/temp_dir"))
@@ -95,8 +107,10 @@ init_template <- function(
 
     cat("Project initialized.\n")
     cat("Please see documentation at: \n")
-    cat(doc_url)
+    cat(resolved$doc_url)
   } else {
     cat("Project initialization canceled.\n")
   }
+
+  invisible(path)
 }
