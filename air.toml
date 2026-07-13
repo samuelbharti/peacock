@@ -1,0 +1,6 @@
+# Air — R formatter (https://posit-dev.github.io/air/)
+# Tidyverse/Posit defaults, stated explicitly.
+[format]
+line-width = 80
+indent-width = 2
+indent-style = "space"
