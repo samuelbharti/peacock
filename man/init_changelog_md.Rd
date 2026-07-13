@@ -18,5 +18,5 @@ Return markdown file in specified or current working directory
 A changelog markdown template to document project progress
 }
 \examples{
-init_changelog_md()
+init_changelog_md(path = tempdir(), confirm = FALSE)
 }

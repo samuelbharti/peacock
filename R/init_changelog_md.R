@@ -7,13 +7,13 @@
 #' @export
 #'
 #' @examples
-#' init_changelog_md()
+#' init_changelog_md(path = tempdir(), confirm = FALSE)
 init_changelog_md <- function(path = getwd(), confirm = TRUE) {
   # Display a message before the prompt
   cat("You current working directory will be:\n")
   cat(path)
 
-  if (confirm) {
+  if (confirm && interactive()) {
     user_input <- tolower(
       readline(
         prompt = "Do you wish to create a Change log MD here? (y/yes to confirm): "
