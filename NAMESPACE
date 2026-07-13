@@ -3,6 +3,7 @@
 export(init_changelog_md)
 export(init_shiny)
 export(init_template)
+export(peacock_templates)
 export(tool_review_template)
 importFrom(utils,download.file)
 importFrom(utils,unzip)
