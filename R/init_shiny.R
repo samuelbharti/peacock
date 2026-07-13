@@ -86,7 +86,7 @@ init_shiny <- function(path = getwd(), confirm = TRUE) {
       "EXPOSE 3838",
       " ",
       "# Run the R Shiny app",
-      "CMD R -e 'shiny::runApp(`/home/my_app`,port = 3838, host = `0.0.0.0`)'"
+      "CMD R -e 'shiny::runApp(\"/home/my_app\", port = 3838, host = \"0.0.0.0\")'"
     )
     test_mod <- c("# Use shinymod to generate module template")
 
