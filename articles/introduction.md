@@ -1,6 +1,7 @@
 # Getting Started with peacock
 
 ``` r
+
 library(peacock)
 ```
 
@@ -38,6 +39,7 @@ peacock provides four main functions:
 The most common use case is starting a new Shiny application.
 
 ``` r
+
 # Create a Shiny app in the current directory
 init_shiny()
 
@@ -71,6 +73,7 @@ variables
 ### Example workflow
 
 ``` r
+
 # 1. Initialize your project
 init_shiny(path = "~/my_app", confirm = FALSE)
 
@@ -90,6 +93,7 @@ If you have complete project templates on GitHub, pull them down with
 [`init_template()`](http://www.samuelbharti.com/peacock/reference/init_template.md).
 
 ``` r
+
 # Use the built-in Shiny template
 init_template("shiny", path = "~/projects/new_shiny_app")
 
@@ -113,6 +117,7 @@ Keep a log of what you’ve done with
 [`init_changelog_md()`](http://www.samuelbharti.com/peacock/reference/init_changelog_md.md).
 
 ``` r
+
 # Add a changelog to your project
 init_changelog_md(path = "~/my_project")
 ```
@@ -126,6 +131,7 @@ This creates `CHANGELOG.md` with this structure:
 
     * Big Change 1
     * Another Change 2
+
 
     Replace the template content with your actual changes. This is helpful for:
 
@@ -179,6 +185,7 @@ Each R script in `src/` includes comments with the tool name and URL.
 ### Example use case
 
 ``` r
+
 # Set up the comparison
 tool_review_template(
   tool_name = c("method_a", "method_b"),
@@ -204,6 +211,7 @@ All functions have a `confirm` parameter. Set it to `FALSE` when using
 peacock in automated scripts:
 
 ``` r
+
 init_shiny(path = "auto_project", confirm = FALSE)
 ```
 
@@ -221,6 +229,7 @@ Templates are starting points. After running a peacock function:
 Peacock works great with RStudio Projects:
 
 ``` r
+
 # 1. Create the structure
 init_shiny(path = "~/my_project", confirm = FALSE)
 
@@ -236,6 +245,7 @@ rstudioapi::openProject("~/my_project")
 You can use multiple peacock functions in one project:
 
 ``` r
+
 # Initialize with a template
 init_template("shiny", path = "~/my_app")
 

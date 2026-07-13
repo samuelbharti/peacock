@@ -22,6 +22,7 @@ so you can start coding immediately.
 Install from GitHub:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("samuelbharti/peacock")
 ```
@@ -33,6 +34,7 @@ devtools::install_github("samuelbharti/peacock")
 Creates a complete Shiny app with organized folders and starter files.
 
 ``` r
+
 library(peacock)
 
 # Set up a new Shiny project
@@ -51,6 +53,7 @@ JavaScript) - `data/`, `R/`, `dev/` - Standard project folders -
 Track project changes in a structured markdown file.
 
 ``` r
+
 init_changelog_md(path = "my_project")
 ```
 
@@ -62,6 +65,7 @@ work.
 Pull down complete project templates from GitHub repositories.
 
 ``` r
+
 # Initialize from a Shiny template
 init_template("shiny", path = "my_project")
 
@@ -77,6 +81,7 @@ workflow](https://github.com/uab-cgds-worthey/cgds_repo_template).
 Organize projects that compare multiple tools or methods.
 
 ``` r
+
 tool_review_template(
   tool_name = c("tool1", "tool2", "tool3"),
   tool_url = c("https://tool1.com", "https://tool2.com", "https://tool3.com"),
@@ -96,6 +101,7 @@ and select “Peacock: Shiny Template” from the templates
 ## Quick start
 
 ``` r
+
 library(peacock)
 
 # Create a new Shiny app in the current directory
