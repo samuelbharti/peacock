@@ -50,12 +50,30 @@ init_template <- function(
 
     # Define the path where the ZIP file will be saved
     temp_dir <- file.path(paste0(dest_dir, "/temp_dir"))
-    dir.create(temp_dir)
+    dir.create(temp_dir, showWarnings = FALSE)
+    # Always clean up the temporary download directory when the function exits
+    on.exit(unlink(temp_dir, recursive = TRUE), add = TRUE)
 
     zip_dest <- file.path(temp_dir, "repo.zip") # Save ZIP file in a temporary directory
 
     # Download the ZIP file
-    download.file(url = zip_url, destfile = zip_dest, mode = "wb", quiet = TRUE)
+    tryCatch(
+      download.file(
+        url = zip_url,
+        destfile = zip_dest,
+        mode = "wb",
+        quiet = TRUE
+      ),
+      error = function(e) {
+        stop(
+          "Failed to download template from ",
+          zip_url,
+          ": ",
+          conditionMessage(e),
+          call. = FALSE
+        )
+      }
+    )
 
     # Extract the ZIP file into a temporary directory
     unzip(zip_dest, exdir = temp_dir)
@@ -75,9 +93,6 @@ init_template <- function(
       to = dest_dir,
       recursive = TRUE
     )
-
-    # Remove the ZIP file after extraction
-    unlink(temp_dir, recursive = TRUE)
 
     cat("Project initialized.\n")
     cat("Please see documentation at: \n")
