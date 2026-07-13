@@ -76,14 +76,20 @@ Creates a `CHANGELOG.md` file with a simple format for documenting your work.
 
 ### 3. Use GitHub templates
 
-Pull down complete project templates from GitHub repositories.
+Pull down complete project templates from GitHub. Use a built-in name, or **any**
+GitHub repository as `"owner/repo"` (optionally pinned with `"owner/repo@ref"`).
 
 ```{r eval = FALSE}
-# Initialize from a Shiny template
+# Built-in templates
 init_template("shiny", path = "my_project")
-
-# Initialize from a CGDS research template
 init_template("cgds", path = "research_project")
+
+# Any GitHub repo, optionally pinned to a branch, tag, or commit
+init_template("owner/repo", path = "my_project")
+init_template("owner/repo@dev", path = "my_project")
+
+# See the built-in templates
+peacock_templates()
 ```
 
 ### 4. Set up tool review projects
