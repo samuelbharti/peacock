@@ -6,3 +6,5 @@
 ^pkgdown$
 ^\.github$
 ^dev_untrack\.R$
+^air\.toml$
+^local$

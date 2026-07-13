@@ -1,0 +1,21 @@
+# Check that R/ is formatted with Air (https://posit-dev.github.io/air/)
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+name: format.yaml
+
+permissions: read-all
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: posit-dev/setup-air@v1
+
+      - name: Check R/ formatting
+        run: air format --check R
