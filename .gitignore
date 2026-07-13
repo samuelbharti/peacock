@@ -8,3 +8,7 @@ test_install
 inst/doc
 docs
 dev_untrack.R
+.Rproj.user
+
+# Private planning workspace (see local/README.md)
+local/
