@@ -79,27 +79,17 @@ tool_review_template <- function(
       if (x == "src") {
         sapply(seq_along(tool_name), function(x) {
           bb <- file.path(aa, paste0(tool_name[x], ".R"))
-          if (file.exists(bb)) {
-            file_info <- file.info(bb)
-            if (is.na(file_info$size) || file_info$size == 0) {
-              # fileConn <- file(bb)
-              # writeLines(
-              #   script_comment(tool_name[x], tool_url[x]),
-              #   fileConn
-              # )
-              # close(fileConn)
-              cat("The file is empty. No changes made.\n")
-            } else {
-              cat("The file is not empty. No changes made.\n")
-            }
-          } else {
-            file.create(bb, showWarnings = FALSE)
+          info <- file.info(bb)
+          # Write the tool header into new or empty files; never overwrite content.
+          if (!file.exists(bb) || is.na(info$size) || info$size == 0) {
             fileConn <- file(bb)
             writeLines(
               script_comment(tool_name[x], tool_url[x]),
               fileConn
             )
             close(fileConn)
+          } else {
+            cat("The file is not empty. No changes made.\n")
           }
         })
       }
