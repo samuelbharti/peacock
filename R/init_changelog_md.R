@@ -10,7 +10,7 @@
 #' init_changelog_md(path = tempdir(), confirm = FALSE)
 init_changelog_md <- function(path = getwd(), confirm = TRUE) {
   # Display a message before the prompt
-  cat("You current working directory will be:\n")
+  cat("Your current working directory will be:\n")
   cat(path)
 
   if (confirm && interactive()) {

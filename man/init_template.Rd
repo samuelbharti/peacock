@@ -24,4 +24,3 @@ Initialize a template repository from GitHub Templates
 init_template("shiny",getwd())
 }
 }
-\keyword{internal}

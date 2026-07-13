@@ -20,7 +20,7 @@ tool_review_template <- function(
   confirm = TRUE,
   ...
 ) {
-  cat("You current working directory will be:\n")
+  cat("Your current working directory will be:\n")
   cat(path)
 
   if (confirm && interactive()) {
@@ -35,7 +35,7 @@ tool_review_template <- function(
 
   if (user_input %in% c("y", "yes")) {
     if (length(tool_name) != length(tool_url)) {
-      print("Please provide URL or Empty qoutes for Each tool")
+      print("Please provide a URL or empty quotes for each tool")
       return(invisible(NULL))
     }
 
