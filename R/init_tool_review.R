@@ -77,7 +77,7 @@ tool_review_template <- function(
       }
 
       if (x == "src") {
-        sapply(1:length(tool_name), function(x) {
+        sapply(seq_along(tool_name), function(x) {
           bb <- file.path(aa, paste0(tool_name[x], ".R"))
           if (file.exists(bb)) {
             file_info <- file.info(bb)
