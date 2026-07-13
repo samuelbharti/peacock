@@ -5,14 +5,14 @@ Initialize a template repository from GitHub Templates
 ## Usage
 
 ``` r
-init_template(template_name, path = getwd(), confirm = TRUE)
+init_template(template_name = c("shiny", "cgds"), path = getwd(), confirm = TRUE)
 ```
 
 ## Arguments
 
 - template_name:
 
-  Name of template. "shiny", "cgds"
+  Name of template, one of "shiny" or "cgds". Defaults to "shiny".
 
 - path:
 
