@@ -23,7 +23,7 @@ tool_review_template <- function(
   cat("You current working directory will be:\n")
   cat(path)
 
-  if (confirm) {
+  if (confirm && interactive()) {
     user_input <- tolower(
       readline(
         prompt = "Do you wish to create a project template here? (y/yes to confirm): "
