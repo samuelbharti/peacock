@@ -4,10 +4,10 @@
 \alias{init_template}
 \title{Initialize a template repository from GitHub Templates}
 \usage{
-init_template(template_name, path = getwd(), confirm = TRUE)
+init_template(template_name = c("shiny", "cgds"), path = getwd(), confirm = TRUE)
 }
 \arguments{
-\item{template_name}{Name of template. "shiny", "cgds"}
+\item{template_name}{Name of template, one of "shiny" or "cgds". Defaults to "shiny".}
 
 \item{path}{Path where project template will be created.}
 
