@@ -12,7 +12,6 @@
 #' \dontrun{
 #' init_template("shiny",getwd())
 #' }
-#' @keywords internal
 init_template <- function(
   template_name = c("shiny", "cgds"),
   path = getwd(),
@@ -21,7 +20,7 @@ init_template <- function(
   template_name <- match.arg(template_name)
 
   # Display a message before the prompt
-  cat("You current working directory will be:\n")
+  cat("Your current working directory will be:\n")
   cat(path)
 
   if (confirm && interactive()) {
