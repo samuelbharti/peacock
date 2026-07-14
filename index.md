@@ -182,4 +182,4 @@ scripting).
 
 ## License
 
-GPL-3
+MIT © Samuel Bharti
