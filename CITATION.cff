@@ -10,6 +10,7 @@ authors:
   - family-names: Bharti
     given-names: Samuel
     email: samuelbharti@gmail.com
+    orcid: "https://orcid.org/0000-0003-4190-7058"
 version: 0.2.0
 date-released: "2026-07-14"
 license: MIT
