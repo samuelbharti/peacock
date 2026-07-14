@@ -1,0 +1,31 @@
+{
+  "title": "peacock: Quick Project Initialization with Templates",
+  "description": "Streamline project setup by initializing directory structures with pre-configured templates. Create Shiny applications, research projects, and tool comparison studies with organized folders and starter files.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Bharti, Samuel"
+    }
+  ],
+  "keywords": [
+    "R",
+    "project templates",
+    "scaffolding",
+    "reproducible research",
+    "Shiny"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/samuelbharti/peacock",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "http://www.samuelbharti.com/peacock/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

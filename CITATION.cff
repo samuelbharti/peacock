@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use peacock, please cite it using the metadata below."
+type: software
+title: "peacock: Quick Project Initialization with Templates"
+abstract: >-
+  Streamline project setup by initializing directory structures with
+  pre-configured templates. Create Shiny applications, research projects, and
+  tool comparison studies with organized folders and starter files.
+authors:
+  - family-names: Bharti
+    given-names: Samuel
+    email: samuelbharti@gmail.com
+version: 0.2.0
+date-released: "2026-07-14"
+license: MIT
+repository-code: "https://github.com/samuelbharti/peacock"
+url: "http://www.samuelbharti.com/peacock/"
+keywords:
+  - R
+  - project templates
+  - scaffolding
+  - reproducible research
+  - Shiny
