@@ -67,7 +67,7 @@ read_registry <- function(registry = NULL) {
 #'
 #' @param template_name Registry name or `"owner/repo"` / `"owner/repo@ref"`.
 #' @param ref Optional branch/tag/SHA override.
-#' @param registry Optional custom registry path (see [read_registry()]).
+#' @param registry Optional custom registry path (see `read_registry()`).
 #' @return A list with `repo`, `ref`, and `doc_url`.
 #' @noRd
 resolve_template <- function(template_name, ref = NULL, registry = NULL) {

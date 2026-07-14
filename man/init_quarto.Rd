@@ -23,7 +23,7 @@ Invisibly, the \code{path} the project was created in.
 }
 \description{
 Scaffolds a starter \href{https://quarto.org}{Quarto} project: a website, a book,
-or a manuscript, with a \code{_quarto.yml} and starter documents.
+or a manuscript, with a \verb{_quarto.yml} and starter documents.
 }
 \examples{
 init_quarto(path = tempdir(), confirm = FALSE)

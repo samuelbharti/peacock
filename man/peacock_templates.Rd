@@ -18,7 +18,7 @@ and \code{Description}.
 \description{
 Returns the registry of curated templates that \code{\link[=init_template]{init_template()}} understands
 by short name. You can also pass any GitHub \code{"owner/repo"} (optionally
-\code{"owner/repo@ref"}) to \code{\link[=init_template]{init_template()}} without it being in this registry.
+\code{"owner/repo@ref"}) to \code{init_template()} without it being in this registry.
 }
 \examples{
 peacock_templates()
