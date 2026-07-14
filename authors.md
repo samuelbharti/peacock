@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/samuelbharti/peacock/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/samuelbharti/peacock/blob/v0.2.0/DESCRIPTION)
 
 Bharti S (2026). *peacock: Quick Project Initialization with Templates*.
 R package version 0.2.0, <http://www.samuelbharti.com/peacock/>.
