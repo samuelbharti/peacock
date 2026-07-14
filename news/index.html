@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">peacock</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,34 @@
       <small>Source: <a href="https://github.com/samuelbharti/peacock/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.2.0" id="peacock-020">peacock 0.2.0<a class="anchor" aria-label="anchor" href="#peacock-020"></a></h2>
+<div class="section level3">
+<h3 id="new-features-0-2-0">New features<a class="anchor" aria-label="anchor" href="#new-features-0-2-0"></a></h3>
+<ul><li><p><code><a href="../reference/init_template.html">init_template()</a></code> now accepts <strong>any</strong> GitHub repository as <code>"owner/repo"</code> or <code>"owner/repo@ref"</code> (branch, tag, or commit), in addition to the built-in names. Templates are defined in a data-file registry, and the download targets the repository’s default branch (<code>HEAD</code>) instead of a hardcoded <code>main</code>.</p></li>
+<li><p><code><a href="../reference/peacock_templates.html">peacock_templates()</a></code> lists the built-in templates. A custom registry (DCF or YAML) can be supplied via the <code>registry</code> argument.</p></li>
+<li><p><code><a href="../reference/init_analysis.html">init_analysis()</a></code> scaffolds a reproducible analysis project (raw/processed data, analysis notebooks, reusable functions, and outputs).</p></li>
+<li><p><code><a href="../reference/init_quarto.html">init_quarto()</a></code> scaffolds a Quarto <code>website</code>, <code>book</code>, or <code>manuscript</code>.</p></li>
+<li><p><code><a href="../reference/init_python.html">init_python()</a></code> emits a modern Python project (src layout, <code>pyproject.toml</code> with ruff and pytest). peacock stays an R package.</p></li>
+<li><p><code><a href="../reference/init_shiny.html">init_shiny()</a></code>, <code><a href="../reference/init_analysis.html">init_analysis()</a></code>, <code><a href="../reference/init_quarto.html">init_quarto()</a></code>, and <code><a href="../reference/init_python.html">init_python()</a></code> now also write <code>AGENTS.md</code> and <code>CLAUDE.md</code> so AI coding assistants are productive immediately.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="reliability-0-2-0">Reliability<a class="anchor" aria-label="anchor" href="#reliability-0-2-0"></a></h3>
+<ul><li><p>Added a <code>testthat</code> (edition 3) test suite and a cross-platform <code>R CMD check</code> GitHub Actions workflow (Ubuntu, Windows, macOS).</p></li>
+<li><p>Adopted the <a href="https://posit-dev.github.io/air/" class="external-link">Air</a> formatter, enforced in CI.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="bug-fixes-0-2-0">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-2-0"></a></h3>
+<ul><li><p><code><a href="../reference/init_template.html">init_template()</a></code> validates its template argument and fails fast with a clear message for unknown names; the download is wrapped with error handling and always cleans up its temporary directory.</p></li>
+<li><p><code><a href="../reference/tool_review_template.html">tool_review_template()</a></code> uses <code><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_along()</a></code> (previously errored on an empty <code>tool_name</code>) and now populates new <em>and</em> empty <code>src/</code> scripts.</p></li>
+<li><p>The Shiny <code>Dockerfile</code> <code>CMD</code> uses valid quoting (previously backticks).</p></li>
+<li><p>Confirmation prompts are shown only in interactive sessions, so scripted use no longer silently cancels.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="other-0-2-0">Other<a class="anchor" aria-label="anchor" href="#other-0-2-0"></a></h3>
+<ul><li>The <code>init_*</code> scaffolding functions now return the created <code>path</code> invisibly.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.0" id="peacock-010">peacock 0.1.0<a class="anchor" aria-label="anchor" href="#peacock-010"></a></h2>
 <p>Initial release of peacock.</p>
