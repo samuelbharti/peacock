@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# peacock
+# peacock <img src="man/figures/logo.png" align="right" height="139" alt="peacock hex logo" />
 
 <!-- badges: start -->
 
@@ -10,6 +10,8 @@
 <!-- badges: end -->
 
 peacock helps you quickly set up new R projects with pre-configured directory structures and files. Stop creating the same folders and files manually every time you start a project. Just run a function and get working.
+
+<img src="man/figures/overview.png" alt="One function scaffolds a ready-to-work project: init_shiny('my_app') creates ui.R, server.R, global.R, R/, www/ and an AGENTS.md" width="100%" />
 
 ## Why peacock?
 
