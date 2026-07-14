@@ -128,9 +128,20 @@ init_quarto(path = "my_site", type = "website")
 `type` can be `"website"` (default), `"book"`, or `"manuscript"`; each gets a
 `_quarto.yml` and starter documents.
 
+### 7. Scaffold a Python project
+
+peacock stays an R package, but it can emit a Python project too.
+
+```{r eval = FALSE}
+init_python(path = "my_pkg")
+```
+
+Creates a src-layout package with `pyproject.toml` (ruff + pytest), a starter
+module and test, `.gitignore`, and `AGENTS.md`.
+
 ### Every project is AI-ready
 
-`init_shiny()`, `init_analysis()`, and `init_quarto()` also drop an `AGENTS.md`
+`init_shiny()`, `init_analysis()`, `init_quarto()`, and `init_python()` also drop an `AGENTS.md`
 (plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the
 project — so AI coding assistants are productive from the first commit.
 
