@@ -6,6 +6,8 @@
 \alias{peacock-package}
 \title{peacock: Quick Project Initialization with Templates}
 \description{
+\if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
+
 Streamline project setup by initializing directory structures with pre-configured templates. Create Shiny applications, research projects, and tool comparison studies with organized folders and starter files. Stop recreating the same structure manually and start coding faster.
 }
 \seealso{
@@ -19,6 +21,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Samuel Bharti \email{samuelbharti@gmail.com}
+
+Authors:
+\itemize{
+  \item Samuel Bharti \email{samuelbharti@gmail.com}
+}
 
 }
 \keyword{internal}

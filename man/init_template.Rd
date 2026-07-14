@@ -18,7 +18,7 @@ GitHub repository as \code{"owner/repo"} / \code{"owner/repo@ref"}. Defaults to 
 
 \item{path}{Path where the project template will be created.}
 
-\item{ref}{Optional branch, tag, or commit to download. Overrides an \code{@ref}
+\item{ref}{Optional branch, tag, or commit to download. Overrides an \verb{@ref}
 given in \code{template_name}. Defaults to the template's registry ref, or the
 repository's default branch (\code{HEAD}).}
 

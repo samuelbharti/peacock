@@ -58,6 +58,7 @@ init_shiny(path = "my_shiny_app")
 ```
 
 This creates:
+
 - `ui.R`, `server.R`, `global.R` - Your main Shiny files
 - `modules/` - For modular Shiny components
 - `userInterface/` - UI components organized separately
@@ -93,6 +94,8 @@ init_template("owner/repo@dev", path = "my_project")
 # See the built-in templates
 peacock_templates()
 ```
+
+The CGDS template is part of the [UAB CGDS research workflow](https://github.com/uab-cgds-worthey/cgds_repo_template).
 
 ### 4. Set up tool review projects
 
@@ -147,6 +150,13 @@ peacock's project scaffolds all drop an `AGENTS.md`
 (plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the
 project — so AI coding assistants are productive from the first commit.
 
+## RStudio Integration
+
+Once installed, peacock adds an RStudio Add-in for quick access:
+
+- Find "Peacock: Shiny Template" in the Addins menu
+- Or create a new project and select "Peacock: Shiny Template" from the templates
+
 ## Quick start
 
 ```{r eval = FALSE}
@@ -164,6 +174,7 @@ Set `confirm = FALSE` to skip the confirmation prompt (useful for scripting).
 ## Learn more
 
 - Full documentation: http://www.samuelbharti.com/peacock/
+- Vignette: `vignette("introduction")`
 - Issues and feedback: https://github.com/samuelbharti/peacock/issues
 
 ## License

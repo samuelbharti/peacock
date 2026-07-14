@@ -5,9 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
+[![R-CMD-check](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml) [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) <!-- badges: end -->
 
 peacock helps you quickly set up new R projects with pre-configured directory structures and files. Stop creating the same folders and files manually every time you start a project. Just run a function and get working.
 
@@ -47,6 +45,7 @@ init_shiny(path = "my_shiny_app")
 ```
 
 This creates:
+
 - `ui.R`, `server.R`, `global.R` - Your main Shiny files
 - `modules/` - For modular Shiny components
 - `userInterface/` - UI components organized separately
@@ -67,8 +66,7 @@ Creates a `CHANGELOG.md` file with a simple format for documenting your work.
 
 ### 3. Use GitHub templates
 
-Pull down complete project templates from GitHub. Use a built-in name, or **any**
-GitHub repository as `"owner/repo"` (optionally pinned with `"owner/repo@ref"`).
+Pull down complete project templates from GitHub. Use a built-in name, or **any** GitHub repository as `"owner/repo"` (optionally pinned with `"owner/repo@ref"`).
 
 ``` r
 # Built-in templates
@@ -107,8 +105,7 @@ Set up a tidy layout for a data-analysis or research project.
 init_analysis(path = "my_study")
 ```
 
-Creates `data/{raw,processed}`, `R/`, `analysis/` (with a starter Quarto notebook),
-and `output/{figures,tables}`, plus a README and `.gitignore`.
+Creates `data/{raw,processed}`, `R/`, `analysis/` (with a starter Quarto notebook), and `output/{figures,tables}`, plus a README and `.gitignore`.
 
 ### 6. Scaffold a Quarto project
 
@@ -118,8 +115,7 @@ Create a Quarto website, book, or manuscript.
 init_quarto(path = "my_site", type = "website")
 ```
 
-`type` can be `"website"` (default), `"book"`, or `"manuscript"`; each gets a
-`_quarto.yml` and starter documents.
+`type` can be `"website"` (default), `"book"`, or `"manuscript"`; each gets a `_quarto.yml` and starter documents.
 
 ### 7. Scaffold a Python project
 
@@ -129,20 +125,18 @@ peacock stays an R package, but it can emit a Python project too.
 init_python(path = "my_pkg")
 ```
 
-Creates a src-layout package with `pyproject.toml` (ruff + pytest), a starter
-module and test, `.gitignore`, and `AGENTS.md`.
+Creates a src-layout package with `pyproject.toml` (ruff + pytest), a starter module and test, `.gitignore`, and `AGENTS.md`.
 
 ### Every project is AI-ready
 
-peacock's project scaffolds all drop an `AGENTS.md`
-(plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the
-project — so AI coding assistants are productive from the first commit.
+peacock’s project scaffolds all drop an `AGENTS.md` (plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the project — so AI coding assistants are productive from the first commit.
 
 ## RStudio Integration
 
 Once installed, peacock adds an RStudio Add-in for quick access:
-- Find "Peacock: Shiny Template" in the Addins menu
-- Or create a new project and select "Peacock: Shiny Template" from the templates
+
+- Find “Peacock: Shiny Template” in the Addins menu
+- Or create a new project and select “Peacock: Shiny Template” from the templates
 
 ## Quick start
 
@@ -160,9 +154,9 @@ Set `confirm = FALSE` to skip the confirmation prompt (useful for scripting).
 
 ## Learn more
 
-- Full documentation: http://www.samuelbharti.com/peacock/
+- Full documentation: <http://www.samuelbharti.com/peacock/>
 - Vignette: `vignette("introduction")`
-- Issues and feedback: https://github.com/samuelbharti/peacock/issues
+- Issues and feedback: <https://github.com/samuelbharti/peacock/issues>
 
 ## License
 
