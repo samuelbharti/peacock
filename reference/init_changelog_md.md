@@ -27,5 +27,5 @@ Return markdown file in specified or current working directory
 ``` r
 init_changelog_md(path = tempdir(), confirm = FALSE)
 #> Your current working directory will be:
-#> /tmp/RtmpXXBBza
+#> /tmp/Rtmpm2WqSD
 ```
