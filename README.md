@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml) [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) <!-- badges: end -->
+[![R-CMD-check](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml) [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21350436.svg)](https://doi.org/10.5281/zenodo.21350436) <!-- badges: end -->
 
 peacock helps you quickly set up new R projects with pre-configured directory structures and files. Stop creating the same folders and files manually every time you start a project. Just run a function and get working.
 
