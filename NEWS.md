@@ -1,3 +1,52 @@
+# peacock 0.2.0
+
+## New features
+
+* `init_template()` now accepts **any** GitHub repository as `"owner/repo"` or
+  `"owner/repo@ref"` (branch, tag, or commit), in addition to the built-in names.
+  Templates are defined in a data-file registry, and the download targets the
+  repository's default branch (`HEAD`) instead of a hardcoded `main`.
+
+* `peacock_templates()` lists the built-in templates. A custom registry (DCF or
+  YAML) can be supplied via the `registry` argument.
+
+* `init_analysis()` scaffolds a reproducible analysis project (raw/processed data,
+  analysis notebooks, reusable functions, and outputs).
+
+* `init_quarto()` scaffolds a Quarto `website`, `book`, or `manuscript`.
+
+* `init_python()` emits a modern Python project (src layout, `pyproject.toml` with
+  ruff and pytest). peacock stays an R package.
+
+* `init_shiny()`, `init_analysis()`, `init_quarto()`, and `init_python()` now also
+  write `AGENTS.md` and `CLAUDE.md` so AI coding assistants are productive
+  immediately.
+
+## Reliability
+
+* Added a `testthat` (edition 3) test suite and a cross-platform `R CMD check`
+  GitHub Actions workflow (Ubuntu, Windows, macOS).
+
+* Adopted the [Air](https://posit-dev.github.io/air/) formatter, enforced in CI.
+
+## Bug fixes
+
+* `init_template()` validates its template argument and fails fast with a clear
+  message for unknown names; the download is wrapped with error handling and
+  always cleans up its temporary directory.
+
+* `tool_review_template()` uses `seq_along()` (previously errored on an empty
+  `tool_name`) and now populates new *and* empty `src/` scripts.
+
+* The Shiny `Dockerfile` `CMD` uses valid quoting (previously backticks).
+
+* Confirmation prompts are shown only in interactive sessions, so scripted use no
+  longer silently cancels.
+
+## Other
+
+* The `init_*` scaffolding functions now return the created `path` invisibly.
+
 # peacock 0.1.0
 
 Initial release of peacock.
