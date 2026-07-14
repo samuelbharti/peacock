@@ -32,6 +32,10 @@ test_that("tool_review_template() creates a src script with the tool header", {
   lines <- readLines(file.path(dir, "src", "toolA.R"))
   expect_true(any(grepl("Tool name: toolA", lines, fixed = TRUE)))
   expect_true(any(grepl("https://a.example", lines, fixed = TRUE)))
+
+  # AI-native: agent guidance files
+  expect_true(file.exists(file.path(dir, "AGENTS.md")))
+  expect_true(file.exists(file.path(dir, "CLAUDE.md")))
 })
 
 test_that("tool_review_template() populates an empty existing src script", {

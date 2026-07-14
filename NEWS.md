@@ -18,9 +18,9 @@
 * `init_python()` emits a modern Python project (src layout, `pyproject.toml` with
   ruff and pytest). peacock stays an R package.
 
-* `init_shiny()`, `init_analysis()`, `init_quarto()`, and `init_python()` now also
-  write `AGENTS.md` and `CLAUDE.md` so AI coding assistants are productive
-  immediately.
+* Every project scaffold - `init_shiny()`, `init_analysis()`, `init_quarto()`,
+  `init_python()`, and `tool_review_template()` - now also writes `AGENTS.md` and
+  `CLAUDE.md` so AI coding assistants are productive immediately.
 
 ## Reliability
 
