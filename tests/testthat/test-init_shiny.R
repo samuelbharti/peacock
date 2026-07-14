@@ -13,3 +13,14 @@ test_that("init_shiny() writes a Dockerfile with a valid CMD (no backtick quotin
   expect_no_match(cmd, "`", fixed = TRUE)
   expect_match(cmd, "/home/my_app", fixed = TRUE)
 })
+
+test_that("init_shiny() drops AGENTS.md and CLAUDE.md", {
+  dir <- file.path(tempdir(), "peacock-shiny-agents")
+  dir.create(dir, showWarnings = FALSE)
+  on.exit(unlink(dir, recursive = TRUE), add = TRUE)
+
+  init_shiny(path = dir, confirm = FALSE)
+
+  expect_true(file.exists(file.path(dir, "AGENTS.md")))
+  expect_true(file.exists(file.path(dir, "CLAUDE.md")))
+})

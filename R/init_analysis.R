@@ -115,6 +115,28 @@ init_analysis <- function(path = getwd(), confirm = TRUE) {
     )
   )
 
+  write_agent_files(
+    path,
+    c(
+      "# Analysis project - agent guide",
+      "",
+      "A reproducible analysis project scaffolded with peacock.",
+      "",
+      "## Workflow",
+      "",
+      "- Put original inputs in `data/raw/` and treat them as read-only.",
+      "- Write cleaned or derived data to `data/processed/`.",
+      "- Do the analysis in `analysis/*.qmd` notebooks; build with `quarto render`.",
+      "- Keep reusable functions in `R/` and `source()` them from notebooks.",
+      "- Save results to `output/figures/` and `output/tables/`.",
+      "",
+      "## Conventions",
+      "",
+      "- Never edit files in `data/raw/`.",
+      "- Prefer functions in `R/` over copy-pasting code between notebooks."
+    )
+  )
+
   cat("Analysis project initialized.\n")
   invisible(path)
 }

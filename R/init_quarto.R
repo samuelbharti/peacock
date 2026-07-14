@@ -167,6 +167,25 @@ init_quarto <- function(
     write_file("references.bib", bib_stub())
   }
 
+  write_agent_files(
+    path,
+    c(
+      paste0("# Quarto ", type, " - agent guide"),
+      "",
+      paste0("A Quarto ", type, " scaffolded with peacock."),
+      "",
+      "## Build",
+      "",
+      "- `quarto preview` for a live preview; `quarto render` to build.",
+      "",
+      "## Layout",
+      "",
+      "- `_quarto.yml` - project and format configuration.",
+      "- `index.qmd` - the entry document.",
+      "- Add pages or chapters as `.qmd` files and register them in `_quarto.yml`."
+    )
+  )
+
   cat("Quarto", type, "project initialized.\n")
   invisible(path)
 }

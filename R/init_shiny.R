@@ -189,6 +189,33 @@ init_shiny <- function(path = getwd(), confirm = TRUE) {
         close(fileConn)
       }
     })
+
+    write_agent_files(
+      wd_path,
+      c(
+        "# Shiny app - agent guide",
+        "",
+        "A Shiny application scaffolded with peacock.",
+        "",
+        "## Run",
+        "",
+        "- `shiny::runApp()` from the project root (or Run App in RStudio).",
+        "",
+        "## Layout",
+        "",
+        "- `ui.R`, `server.R`, `global.R` - app entry points.",
+        "- `modules/` - Shiny modules; `userInterface/` - page UIs.",
+        "- `R/load_components.R` sources modules and UI automatically.",
+        "- `www/` - static assets (css, img, js); `data/` - data files.",
+        "",
+        "## Conventions",
+        "",
+        "- Add a page as `userInterface/<page>_ui.R` and reference it in `ui.R`.",
+        "- Put secrets in `.Renviron` (never commit real values).",
+        "- `Dockerfile` builds on `rocker/shiny` and exposes port 3838."
+      )
+    )
+
     cat("Project initialized.\n")
     cat("Please see documentation at:\n")
     cat("https://www.samuelbharti.com/posts/r-shiny-template/")

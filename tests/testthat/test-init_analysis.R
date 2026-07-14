@@ -18,4 +18,12 @@ test_that("init_analysis() scaffolds the expected structure", {
   expect_true(file.exists(file.path(dir, "R", "functions.R")))
   expect_true(file.exists(file.path(dir, "analysis", "notebook.qmd")))
   expect_true(file.exists(file.path(dir, "data", "raw", ".gitkeep")))
+
+  # AI-native: agent guidance files
+  expect_true(file.exists(file.path(dir, "AGENTS.md")))
+  expect_true(file.exists(file.path(dir, "CLAUDE.md")))
+  expect_match(
+    paste(readLines(file.path(dir, "AGENTS.md")), collapse = "\n"),
+    "agent guide"
+  )
 })
