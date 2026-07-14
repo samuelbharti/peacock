@@ -32,5 +32,5 @@ Invisibly, the `path` the project was created in.
 ``` r
 init_python(path = file.path(tempdir(), "my_pkg"), confirm = FALSE)
 #> Your current working directory will be:
-#> /tmp/RtmpMAFJpS/my_pkgPython project initialized.
+#> /tmp/RtmpXv5SpX/my_pkgPython project initialized.
 ```

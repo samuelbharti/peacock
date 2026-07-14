@@ -138,14 +138,9 @@ starter module and test, `.gitignore`, and `AGENTS.md`.
 
 ### Every project is AI-ready
 
-[`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md),
-[`init_analysis()`](http://www.samuelbharti.com/peacock/reference/init_analysis.md),
-[`init_quarto()`](http://www.samuelbharti.com/peacock/reference/init_quarto.md),
-and
-[`init_python()`](http://www.samuelbharti.com/peacock/reference/init_python.md)
-also drop an `AGENTS.md` (plus a `CLAUDE.md` that imports it) describing
-how to run, build, and work in the project — so AI coding assistants are
-productive from the first commit.
+peacock’s project scaffolds all drop an `AGENTS.md` (plus a `CLAUDE.md`
+that imports it) describing how to run, build, and work in the project —
+so AI coding assistants are productive from the first commit.
 
 ## RStudio Integration
 

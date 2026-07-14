@@ -26,13 +26,15 @@
   emits a modern Python project (src layout, `pyproject.toml` with ruff
   and pytest). peacock stays an R package.
 
-- [`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md),
+- Every project scaffold -
+  [`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md),
   [`init_analysis()`](http://www.samuelbharti.com/peacock/reference/init_analysis.md),
   [`init_quarto()`](http://www.samuelbharti.com/peacock/reference/init_quarto.md),
+  [`init_python()`](http://www.samuelbharti.com/peacock/reference/init_python.md),
   and
-  [`init_python()`](http://www.samuelbharti.com/peacock/reference/init_python.md)
-  now also write `AGENTS.md` and `CLAUDE.md` so AI coding assistants are
-  productive immediately.
+  [`tool_review_template()`](http://www.samuelbharti.com/peacock/reference/tool_review_template.md) -
+  now also writes `AGENTS.md` and `CLAUDE.md` so AI coding assistants
+  are productive immediately.
 
 ### Reliability
 
