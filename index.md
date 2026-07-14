@@ -45,12 +45,15 @@ library(peacock)
 init_shiny(path = "my_shiny_app")
 ```
 
-This creates: - `ui.R`, `server.R`, `global.R` - Your main Shiny files -
-`modules/` - For modular Shiny components - `userInterface/` - UI
-components organized separately - `www/` - Static files (CSS, images,
-JavaScript) - `data/`, `R/`, `dev/` - Standard project folders -
-`Dockerfile` - Ready for containerization - `.gitignore` and
-`.Renviron` - Project configuration
+This creates:
+
+- `ui.R`, `server.R`, `global.R` - Your main Shiny files
+- `modules/` - For modular Shiny components
+- `userInterface/` - UI components organized separately
+- `www/` - Static files (CSS, images, JavaScript)
+- `data/`, `R/`, `dev/` - Standard project folders
+- `Dockerfile` - Ready for containerization
+- `.gitignore` and `.Renviron` - Project configuration
 
 ### 2. Create a changelog
 
@@ -148,9 +151,11 @@ so AI coding assistants are productive from the first commit.
 
 ## RStudio Integration
 
-Once installed, peacock adds an RStudio Add-in for quick access: - Find
-“Peacock: Shiny Template” in the Addins menu - Or create a new project
-and select “Peacock: Shiny Template” from the templates
+Once installed, peacock adds an RStudio Add-in for quick access:
+
+- Find “Peacock: Shiny Template” in the Addins menu
+- Or create a new project and select “Peacock: Shiny Template” from the
+  templates
 
 ## Quick start
 

@@ -18,3 +18,7 @@ Useful links:
 ## Author
 
 **Maintainer**: Samuel Bharti <samuelbharti@gmail.com>
+
+Authors:
+
+- Samuel Bharti <samuelbharti@gmail.com>
