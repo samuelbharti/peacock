@@ -5,6 +5,10 @@ directory structures and files. Stop creating the same folders and files
 manually every time you start a project. Just run a function and get
 working.
 
+![One function scaffolds a ready-to-work project: init_shiny('my_app')
+creates ui.R, server.R, global.R, R/, www/ and an
+AGENTS.md](reference/figures/overview.png)
+
 ## Why peacock?
 
 When starting a new project, you probably find yourself:
