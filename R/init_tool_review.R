@@ -94,6 +94,28 @@ tool_review_template <- function(
         })
       }
     })
+
+    write_agent_files(
+      wd_path,
+      c(
+        "# Tool review project - agent guide",
+        "",
+        "A tool/method comparison project scaffolded with peacock.",
+        "",
+        "## Layout",
+        "",
+        "- `src/<tool>.R` - one script per tool (headed with its name and URL).",
+        "- `data/shared/` - inputs used by all tools (read-only).",
+        "- `data/preprocessed/<tool>/` - per-tool prepared data; `data/other/`.",
+        "- `out/<tool>/` - per-tool outputs.",
+        "- `notebooks/`, `configs/`, `docs/` - analysis, config, and write-ups.",
+        "",
+        "## Conventions",
+        "",
+        "- Keep shared inputs in `data/shared/` and treat them as read-only.",
+        "- Put each tool's results under `out/<tool>/`."
+      )
+    )
   } else {
     cat("Project initialization canceled.\n")
   }
