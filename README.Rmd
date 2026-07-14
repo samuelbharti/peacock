@@ -128,6 +128,12 @@ init_quarto(path = "my_site", type = "website")
 `type` can be `"website"` (default), `"book"`, or `"manuscript"`; each gets a
 `_quarto.yml` and starter documents.
 
+### Every project is AI-ready
+
+`init_shiny()`, `init_analysis()`, and `init_quarto()` also drop an `AGENTS.md`
+(plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the
+project — so AI coding assistants are productive from the first commit.
+
 ## Quick start
 
 ```{r eval = FALSE}
