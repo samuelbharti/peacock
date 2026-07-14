@@ -99,6 +99,19 @@ tool_review_template(
 This creates organized folders for data, scripts, outputs, and
 documentation for each tool.
 
+### 5. Scaffold a reproducible analysis project
+
+Set up a tidy layout for a data-analysis or research project.
+
+``` r
+
+init_analysis(path = "my_study")
+```
+
+Creates `data/{raw,processed}`, `R/`, `analysis/` (with a starter Quarto
+notebook), and `output/{figures,tables}`, plus a README and
+`.gitignore`.
+
 ## RStudio Integration
 
 Once installed, peacock adds an RStudio Add-in for quick access: - Find

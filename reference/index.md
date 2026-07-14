@@ -2,6 +2,8 @@
 
 ## All functions
 
+- [`init_analysis()`](http://www.samuelbharti.com/peacock/reference/init_analysis.md)
+  : Initialize a reproducible analysis project
 - [`init_changelog_md()`](http://www.samuelbharti.com/peacock/reference/init_changelog_md.md)
   : A changelog markdown template to document project progress
 - [`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md)
