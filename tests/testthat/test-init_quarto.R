@@ -12,6 +12,8 @@ test_that("init_quarto() scaffolds a website by default", {
     paste(readLines(file.path(dir, "_quarto.yml")), collapse = "\n"),
     "type: website"
   )
+  expect_true(file.exists(file.path(dir, "AGENTS.md")))
+  expect_true(file.exists(file.path(dir, "CLAUDE.md")))
 })
 
 test_that("init_quarto() scaffolds a book with a bibliography", {
