@@ -9,3 +9,6 @@
 ^air\.toml$
 ^local$
 ^data-raw$
+^LICENSE\.md$
+^CITATION\.cff$
+^\.zenodo\.json$
