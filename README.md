@@ -160,4 +160,4 @@ Set `confirm = FALSE` to skip the confirmation prompt (useful for scripting).
 
 ## License
 
-GPL-3
+MIT © Samuel Bharti

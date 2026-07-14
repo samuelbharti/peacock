@@ -8,7 +8,7 @@ Description: Streamline project setup by initializing directory structures
     with pre-configured templates. Create Shiny applications, research projects, 
     and tool comparison studies with organized folders and starter files. 
     Stop recreating the same structure manually and start coding faster.
-License: GPL-3 + file LICENSE
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests:
