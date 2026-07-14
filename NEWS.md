@@ -45,6 +45,11 @@
 
 ## Other
 
+* peacock is now released under the MIT license (previously GPL-3).
+
+* Added a package hex-sticker logo (in an Indian folk-art style), a companion
+  overview graphic, and browser-tab favicons for the documentation site.
+
 * The `init_*` scaffolding functions now return the created `path` invisibly.
 
 # peacock 0.1.0
