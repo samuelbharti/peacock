@@ -124,6 +124,16 @@ init_quarto(path = "my_site", type = "website")
 `type` can be `"website"` (default), `"book"`, or `"manuscript"`; each
 gets a `_quarto.yml` and starter documents.
 
+### Every project is AI-ready
+
+[`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md),
+[`init_analysis()`](http://www.samuelbharti.com/peacock/reference/init_analysis.md),
+and
+[`init_quarto()`](http://www.samuelbharti.com/peacock/reference/init_quarto.md)
+also drop an `AGENTS.md` (plus a `CLAUDE.md` that imports it) describing
+how to run, build, and work in the project — so AI coding assistants are
+productive from the first commit.
+
 ## RStudio Integration
 
 Once installed, peacock adds an RStudio Add-in for quick access: - Find
