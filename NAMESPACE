@@ -2,6 +2,7 @@
 
 export(init_analysis)
 export(init_changelog_md)
+export(init_python)
 export(init_quarto)
 export(init_shiny)
 export(init_template)
