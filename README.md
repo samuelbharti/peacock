@@ -132,7 +132,7 @@ module and test, `.gitignore`, and `AGENTS.md`.
 
 ### Every project is AI-ready
 
-`init_shiny()`, `init_analysis()`, `init_quarto()`, and `init_python()` also drop an `AGENTS.md`
+peacock's project scaffolds all drop an `AGENTS.md`
 (plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the
 project — so AI coding assistants are productive from the first commit.
 
