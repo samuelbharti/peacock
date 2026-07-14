@@ -146,9 +146,17 @@
 <p><code>type</code> can be <code>"website"</code> (default), <code>"book"</code>, or <code>"manuscript"</code>; each gets a <code>_quarto.yml</code> and starter documents.</p>
 </div>
 <div class="section level3">
+<h3 id="id_7-scaffold-a-python-project">7. Scaffold a Python project<a class="anchor" aria-label="anchor" href="#id_7-scaffold-a-python-project"></a>
+</h3>
+<p>peacock stays an R package, but it can emit a Python project too.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/init_python.html">init_python</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_pkg"</span><span class="op">)</span></span></code></pre></div>
+<p>Creates a src-layout package with <code>pyproject.toml</code> (ruff + pytest), a starter module and test, <code>.gitignore</code>, and <code>AGENTS.md</code>.</p>
+</div>
+<div class="section level3">
 <h3 id="every-project-is-ai-ready">Every project is AI-ready<a class="anchor" aria-label="anchor" href="#every-project-is-ai-ready"></a>
 </h3>
-<p><code><a href="reference/init_shiny.html">init_shiny()</a></code>, <code><a href="reference/init_analysis.html">init_analysis()</a></code>, and <code><a href="reference/init_quarto.html">init_quarto()</a></code> also drop an <code>AGENTS.md</code> (plus a <code>CLAUDE.md</code> that imports it) describing how to run, build, and work in the project — so AI coding assistants are productive from the first commit.</p>
+<p><code><a href="reference/init_shiny.html">init_shiny()</a></code>, <code><a href="reference/init_analysis.html">init_analysis()</a></code>, <code><a href="reference/init_quarto.html">init_quarto()</a></code>, and <code><a href="reference/init_python.html">init_python()</a></code> also drop an <code>AGENTS.md</code> (plus a <code>CLAUDE.md</code> that imports it) describing how to run, build, and work in the project — so AI coding assistants are productive from the first commit.</p>
 </div>
 </div>
 <div class="section level2">
@@ -159,7 +167,7 @@
 <div class="section level2">
 <h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
 </h2>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.samuelbharti.com/peacock/">peacock</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Create a new Shiny app in the current directory</span></span>

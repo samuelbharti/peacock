@@ -6,6 +6,8 @@
   : Initialize a reproducible analysis project
 - [`init_changelog_md()`](http://www.samuelbharti.com/peacock/reference/init_changelog_md.md)
   : A changelog markdown template to document project progress
+- [`init_python()`](http://www.samuelbharti.com/peacock/reference/init_python.md)
+  : Initialize a Python project
 - [`init_quarto()`](http://www.samuelbharti.com/peacock/reference/init_quarto.md)
   : Initialize a Quarto project
 - [`init_shiny()`](http://www.samuelbharti.com/peacock/reference/init_shiny.md)
