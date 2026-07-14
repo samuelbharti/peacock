@@ -112,6 +112,18 @@ Creates `data/{raw,processed}`, `R/`, `analysis/` (with a starter Quarto
 notebook), and `output/{figures,tables}`, plus a README and
 `.gitignore`.
 
+### 6. Scaffold a Quarto project
+
+Create a Quarto website, book, or manuscript.
+
+``` r
+
+init_quarto(path = "my_site", type = "website")
+```
+
+`type` can be `"website"` (default), `"book"`, or `"manuscript"`; each
+gets a `_quarto.yml` and starter documents.
+
 ## RStudio Integration
 
 Once installed, peacock adds an RStudio Add-in for quick access: - Find
