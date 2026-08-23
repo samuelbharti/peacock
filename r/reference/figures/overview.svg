@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 440" width="1240" height="440">
+  <rect x="1" y="1" width="1238" height="438" rx="26" fill="#F3E7CC"
+        stroke="#DDC99C" stroke-width="1.5"/>
+  <text x="620" y="62" font-family="'Segoe UI','Inter',system-ui,sans-serif" font-size="26" font-weight="700"
+        fill="#1B2A63" text-anchor="middle">One function, a ready-to-work project</text>
+  <circle cx="508" cy="80" r="2.2" fill="#B4841F"/><circle cx="524" cy="80" r="2.2" fill="#B4841F"/><circle cx="540" cy="80" r="2.2" fill="#B4841F"/><circle cx="556" cy="80" r="2.2" fill="#B4841F"/><circle cx="572" cy="80" r="2.2" fill="#B4841F"/><circle cx="588" cy="80" r="2.2" fill="#B4841F"/><circle cx="604" cy="80" r="2.2" fill="#B4841F"/><circle cx="620" cy="80" r="2.2" fill="#B4841F"/><circle cx="636" cy="80" r="2.2" fill="#B4841F"/><circle cx="652" cy="80" r="2.2" fill="#B4841F"/><circle cx="668" cy="80" r="2.2" fill="#B4841F"/><circle cx="684" cy="80" r="2.2" fill="#B4841F"/><circle cx="700" cy="80" r="2.2" fill="#B4841F"/><circle cx="716" cy="80" r="2.2" fill="#B4841F"/><circle cx="732" cy="80" r="2.2" fill="#B4841F"/>
+  
+  <rect x="64" y="96" width="470" height="248" rx="16" fill="#161F52"/>
+  <circle cx="92" cy="126" r="6" fill="#E7B24B"/>
+  <circle cx="112" cy="126" r="6" fill="#38C0A6"/>
+  <circle cx="132" cy="126" r="6" fill="#C9A24E"/>
+  <line x1="64" y1="150" x2="534" y2="150"
+        stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.5"/>
+  <text x="96" y="200" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="23">
+    <tspan fill="#EFE3C6">library(</tspan><tspan fill="#E7B24B"
+      font-weight="600">peacock</tspan><tspan fill="#EFE3C6">)</tspan>
+  </text>
+  <text x="96" y="242" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="23">
+    <tspan fill="#38C0A6" font-weight="600">init_shiny</tspan><tspan
+      fill="#EFE3C6">(</tspan><tspan fill="#B7D98A">"my_app"</tspan><tspan
+      fill="#EFE3C6">)</tspan>
+  </text>
+  <text x="96" y="292" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="20"
+        fill="#8E86A8">#&gt; <tspan fill="#38C0A6">&#10003;</tspan> created my_app/</text>
+
+  
+  <text x="621" y="178" font-family="'Segoe UI','Inter',system-ui,sans-serif" font-size="18"
+        fill="#1B2A63" text-anchor="middle" font-weight="600"
+        letter-spacing="0.5">scaffolds</text>
+  <line x1="556" y1="204" x2="680" y2="204" stroke="#B4841F"
+        stroke-width="5" stroke-linecap="round"/>
+  <path d="M 672,195 L 690,204 L 672,213 Z" fill="#B4841F"/>
+
+  
+  <rect x="706" y="96" width="470" height="248" rx="16" fill="#FFFFFF"
+        stroke="#DDC99C" stroke-width="1.5"/>
+  <rect x="734" y="122" width="18" height="14" rx="2.5" fill="#B4841F"/>
+  <rect x="734" y="118" width="9" height="5" rx="1.5" fill="#B4841F"/>
+  <text x="762" y="136" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="20"
+        font-weight="700" fill="#1B2A63">my_app/</text>
+  <line x1="746" y1="158" x2="746" y2="314" stroke="#DDC99C" stroke-width="2"/><line x1="746" y1="174" x2="762" y2="174" stroke="#DDC99C" stroke-width="2"/><path d="M 772,164 H 779 L 784,169 V 179 H 772 Z" fill="#FFFFFF" stroke="#3E6E66" stroke-width="1.8" stroke-linejoin="round"/><path d="M 779,164 V 169 H 784" fill="none" stroke="#3E6E66" stroke-width="1.5"/><text x="796" y="179" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="19" fill="#1B2A63" font-weight="500">ui.R</text><line x1="746" y1="202" x2="762" y2="202" stroke="#DDC99C" stroke-width="2"/><path d="M 772,192 H 779 L 784,197 V 207 H 772 Z" fill="#FFFFFF" stroke="#3E6E66" stroke-width="1.8" stroke-linejoin="round"/><path d="M 779,192 V 197 H 784" fill="none" stroke="#3E6E66" stroke-width="1.5"/><text x="796" y="207" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="19" fill="#1B2A63" font-weight="500">server.R</text><line x1="746" y1="230" x2="762" y2="230" stroke="#DDC99C" stroke-width="2"/><path d="M 772,220 H 779 L 784,225 V 235 H 772 Z" fill="#FFFFFF" stroke="#3E6E66" stroke-width="1.8" stroke-linejoin="round"/><path d="M 779,220 V 225 H 784" fill="none" stroke="#3E6E66" stroke-width="1.5"/><text x="796" y="235" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="19" fill="#1B2A63" font-weight="500">global.R</text><line x1="746" y1="258" x2="762" y2="258" stroke="#DDC99C" stroke-width="2"/><rect x="770" y="250" width="16" height="12" rx="2.5" fill="#1E9C7F"/><rect x="770" y="247" width="8" height="4" rx="1.5" fill="#1E9C7F"/><text x="796" y="263" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="19" fill="#1E9C7F" font-weight="700">R/</text><line x1="746" y1="286" x2="762" y2="286" stroke="#DDC99C" stroke-width="2"/><rect x="770" y="278" width="16" height="12" rx="2.5" fill="#1E9C7F"/><rect x="770" y="275" width="8" height="4" rx="1.5" fill="#1E9C7F"/><text x="796" y="291" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="19" fill="#1E9C7F" font-weight="700">www/</text><line x1="746" y1="314" x2="762" y2="314" stroke="#DDC99C" stroke-width="2"/><path d="M 772,304 H 779 L 784,309 V 319 H 772 Z" fill="#FFFFFF" stroke="#3E6E66" stroke-width="1.8" stroke-linejoin="round"/><path d="M 779,304 V 309 H 784" fill="none" stroke="#3E6E66" stroke-width="1.5"/><text x="796" y="319" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="19" fill="#B4841F" font-weight="700">AGENTS.md</text><rect x="924" y="301" width="34" height="21" rx="10.5" fill="#E7B24B"/><text x="941" y="316" font-family="'Segoe UI','Inter',system-ui,sans-serif" font-size="12.5" font-weight="700" fill="#161F52" text-anchor="middle">AI</text>
+
+  <text x="620" y="405" font-family="'Segoe UI','Inter',system-ui,sans-serif" font-size="16"
+        fill="#B4841F" text-anchor="middle">Shiny apps · analyses · Quarto sites · Python packages · every one AI-ready</text>
+</svg>
