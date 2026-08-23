@@ -1,0 +1,24 @@
+on:
+  release:
+    types: [published]
+
+name: release-py
+
+permissions:
+  id-token: write
+
+defaults:
+  run:
+    working-directory: pkg-py
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v7
+      - run: uv build
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: pkg-py/dist/
