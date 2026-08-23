@@ -1,6 +1,6 @@
 Package: peacock
 Title: Quick Project Initialization with Templates
-Version: 0.3.0
+Version: 0.2.0
 Authors@R:
     person("Samuel", "Bharti", , "samuelbharti.io@gmail.com",
            role = c("aut", "cre"),
