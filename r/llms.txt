@@ -146,7 +146,7 @@ starter module and test, `.gitignore`, and `AGENTS.md`.
 ### Every project is AI-ready
 
 peacock’s project scaffolds all drop an `AGENTS.md` (plus a `CLAUDE.md`
-that imports it) describing how to run, build, and work in the project —
+that imports it) describing how to run, build, and work in the project,
 so AI coding assistants are productive from the first commit.
 
 ## RStudio Integration
