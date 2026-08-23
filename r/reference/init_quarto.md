@@ -37,5 +37,5 @@ Invisibly, the `path` the project was created in.
 ``` r
 init_quarto(path = tempdir(), confirm = FALSE)
 #> Your current working directory will be:
-#> /tmp/Rtmpf2i83lQuarto website project initialized.
+#> /tmp/RtmpFYnuk4Quarto website project initialized.
 ```
