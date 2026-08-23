@@ -6,7 +6,7 @@
 #' @param confirm User confirmation enable for setup
 #' @param ... Additional arguments (currently unused)
 #'
-#' @return Return project structure in specified directory
+#' @return Invisibly, the `path` the project was created in.
 #' @export
 #'
 #' @examples
@@ -119,4 +119,6 @@ tool_review_template <- function(
   } else {
     cat("Project initialization canceled.\n")
   }
+
+  invisible(path)
 }

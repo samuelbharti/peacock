@@ -3,7 +3,7 @@
 #' @param path Path where markdown file is created
 #' @param confirm Confirm path; logical input.
 #'
-#' @return Return markdown file in specified or current working directory
+#' @return Invisibly, the `path` the file was created in.
 #' @export
 #'
 #' @examples
@@ -52,4 +52,6 @@ YYYY-MM-DD  John Doe
   } else {
     cat("Change log MD initialization canceled.\n")
   }
+
+  invisible(path)
 }
