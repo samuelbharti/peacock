@@ -11,8 +11,8 @@ authors:
     given-names: Samuel
     email: samuelbharti.io@gmail.com
     orcid: "https://orcid.org/0000-0003-4190-7058"
-version: 0.2.0
-date-released: "2026-07-14"
+version: 0.3.0
+date-released: "2026-08-23"
 doi: 10.5281/zenodo.21350436
 license: MIT
 repository-code: "https://github.com/samuelbharti/peacock"
