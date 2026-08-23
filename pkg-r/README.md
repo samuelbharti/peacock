@@ -129,7 +129,7 @@ Creates a src-layout package with `pyproject.toml` (ruff + pytest), a starter mo
 
 ### Every project is AI-ready
 
-peacock’s project scaffolds all drop an `AGENTS.md` (plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the project — so AI coding assistants are productive from the first commit.
+peacock’s project scaffolds all drop an `AGENTS.md` (plus a `CLAUDE.md` that imports it) describing how to run, build, and work in the project, so AI coding assistants are productive from the first commit.
 
 ## RStudio Integration
 
