@@ -5,4 +5,9 @@ Interactive: true
 Params:
   confirm: FALSE
 
-
+Name: Peacock: R Package Template
+Description: Standard R package with tests, CI, and Air formatter
+Binding: init_package
+Interactive: true
+Params:
+  confirm: FALSE
