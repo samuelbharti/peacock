@@ -1,3 +1,20 @@
+# peacock 0.3.0
+
+## New features
+
+* `init_package()` scaffolds a full R package with DESCRIPTION, NAMESPACE,
+  starter function, testthat tests, R-CMD-check workflow, air.toml, pkgdown
+  config, and agent files.
+
+## Other
+
+* Restructured to monorepo layout: R package lives in `pkg-r/`, Python CLI
+  in `pkg-py/`, shared template registry in `shared/`.
+
+* Added `peacock-init` Python CLI companion (`pip install peacock-init`).
+
+* Added shared template registry with sync tooling and drift CI.
+
 # peacock 0.2.0
 
 ## New features
