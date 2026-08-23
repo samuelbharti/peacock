@@ -3,7 +3,7 @@
 #' @param path  Path where shiny project template is created
 #' @param confirm Logical. If TRUE, prompts user for confirmation before creating template.
 #'
-#' @return Return shiny project file and directory template in current working directory.
+#' @return Invisibly, the `path` the project was created in.
 #' @examples
 #' \dontrun{
 #' init_shiny()
@@ -222,4 +222,6 @@ init_shiny <- function(path = getwd(), confirm = TRUE) {
   } else {
     cat("Project initialization canceled.\n")
   }
+
+  invisible(path)
 }

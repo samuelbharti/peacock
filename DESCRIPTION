@@ -1,16 +1,17 @@
 Package: peacock
 Title: Quick Project Initialization with Templates
 Version: 0.2.0
-Authors@R: 
-    person("Samuel", "Bharti", , "samuelbharti@gmail.com", role = c("aut", "cre"),
-           comment = "")
-Description: Streamline project setup by initializing directory structures 
-    with pre-configured templates. Create Shiny applications, research projects, 
-    and tool comparison studies with organized folders and starter files. 
-    Stop recreating the same structure manually and start coding faster.
+Authors@R:
+    person("Samuel", "Bharti", , "samuelbharti.io@gmail.com",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4190-7058"))
+Description: Initialize project directory structures from pre-configured
+    templates. Scaffolds for 'Shiny' applications, reproducible analyses,
+    'Quarto' projects, 'Python' projects, and tool comparisons are created
+    with one function call. Arbitrary 'GitHub' repositories can also serve
+    as templates via a built-in registry.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Suggests:
     knitr,
     rmarkdown,
@@ -21,6 +22,8 @@ Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 Imports:
     utils
-URL: http://www.samuelbharti.com/peacock/, https://github.com/samuelbharti/peacock
+URL: https://www.samuelbharti.com/peacock/,
+    https://github.com/samuelbharti/peacock
+RoxygenNote: 8.0.0
 BugReports: https://github.com/samuelbharti/peacock/issues
 Config/roxygen2/version: 8.0.0
