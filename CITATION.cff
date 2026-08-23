@@ -3,9 +3,9 @@ message: "If you use peacock, please cite it using the metadata below."
 type: software
 title: "peacock: Quick Project Initialization with Templates"
 abstract: >-
-  Streamline project setup by initializing directory structures with
-  pre-configured templates. Create Shiny applications, research projects, and
-  tool comparison studies with organized folders and starter files.
+  Initialize project directory structures from pre-configured templates.
+  Scaffolds for Shiny applications, reproducible analyses, Quarto projects,
+  Python projects, and tool comparisons are created with one function call.
 authors:
   - family-names: Bharti
     given-names: Samuel
