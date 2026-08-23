@@ -30,5 +30,5 @@ Invisibly, the `path` the project was created in.
 ``` r
 init_analysis(path = tempdir(), confirm = FALSE)
 #> Your current working directory will be:
-#> /tmp/RtmpHhxE0pAnalysis project initialized.
+#> /tmp/RtmpXnqjQmAnalysis project initialized.
 ```
