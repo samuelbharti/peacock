@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # peacock <img src="man/figures/logo.png" align="right" height="139" alt="peacock hex logo" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/samuelbharti/peacock/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/samuelbharti/peacock/actions/workflows/r.yaml/badge.svg)](https://github.com/samuelbharti/peacock/actions/workflows/r.yaml)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21350436.svg)](https://doi.org/10.5281/zenodo.21350436)
 <!-- badges: end -->

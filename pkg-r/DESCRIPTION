@@ -22,7 +22,7 @@ Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 Imports:
     utils
-URL: https://www.samuelbharti.com/peacock/,
+URL: https://www.samuelbharti.com/peacock/r/,
     https://github.com/samuelbharti/peacock
 RoxygenNote: 8.0.0
 BugReports: https://github.com/samuelbharti/peacock/issues

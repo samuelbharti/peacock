@@ -1,14 +1,39 @@
-*.Rproj
-*.Rproj.user
-*.Rhistory
-*.RData
-*.Ruserdata
-dev.R
-test_install
-inst/doc
-docs
-dev_untrack.R
-.Rproj.user
+# Secrets
+.env
+.env.*
+!.env.example
+.Renviron
 
-# Private planning workspace (see local/README.md)
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+*.Rcheck/
+*.tar.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Built doc sites
+docs/
+pkg-r/docs/
+pkg-py/site/
+
+# Development
 local/
+dev.R
+dev_untrack.R
+test_install
+
+# OS
+.DS_Store
+Thumbs.db
