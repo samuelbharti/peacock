@@ -24,11 +24,12 @@ peacock automates this. It gives you clean, organized project templates so you c
 
 ## Installation
 
-Install from GitHub:
+The package sits in `pkg-r/`, not at the root of the repository, so the path
+needs that suffix:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("samuelbharti/peacock")
+# install.packages("pak")
+pak::pak("samuelbharti/peacock/pkg-r")
 ```
 
 ## What can peacock do?
