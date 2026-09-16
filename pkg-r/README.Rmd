@@ -182,4 +182,3 @@ Set `confirm = FALSE` to skip the confirmation prompt (useful for scripting).
 ## License
 
 MIT © Samuel Bharti
-

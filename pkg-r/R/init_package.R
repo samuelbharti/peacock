@@ -15,8 +15,11 @@
 #'
 #' @examples
 #' init_package(path = file.path(tempdir(), "mypkg"), confirm = FALSE)
-init_package <- function(path = getwd(), title = "What the Package Does",
-                         confirm = TRUE) {
+init_package <- function(
+  path = getwd(),
+  title = "What the Package Does",
+  confirm = TRUE
+) {
   cat("Your current working directory will be:\n")
   cat(path)
 
@@ -63,7 +66,9 @@ init_package <- function(path = getwd(), title = "What the Package Does",
       "    person(\"First\", \"Last\", , \"first.last@example.com\",",
       "           role = c(\"aut\", \"cre\"))",
       paste0(
-        "Description: A short paragraph describing what ", pkg, " does."
+        "Description: A short paragraph describing what ",
+        pkg,
+        " does."
       ),
       "License: MIT + file LICENSE",
       "Encoding: UTF-8",
@@ -147,7 +152,9 @@ init_package <- function(path = getwd(), title = "What the Package Does",
         "# install.packages(\"devtools\")"
       ),
       paste0(
-        "devtools::install_github(\"YOUR_USER/", pkg, "\")"
+        "devtools::install_github(\"YOUR_USER/",
+        pkg,
+        "\")"
       ),
       "```"
     )
