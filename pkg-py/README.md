@@ -9,7 +9,15 @@
 Python CLI companion to the [peacock](https://github.com/samuelbharti/peacock)
 R package. Scaffold project directories from templates with one command.
 
+The CLI covers three of the scaffolds the R package offers: `python`, `analysis`
+and `template`. Both read the same template registry, so a template added once
+is available to both.
+
 ## Install
+
+The name is registered on PyPI but nothing has published to it yet
+([#42](https://github.com/samuelbharti/peacock/issues/42)), so install from the
+repository:
 
 ```bash
 pip install "peacock-init @ git+https://github.com/samuelbharti/peacock#subdirectory=pkg-py"
@@ -39,6 +47,13 @@ peacock templates
 Run `peacock templates` to see the built-in template registry. Templates are
 GitHub repositories that get cloned and unpacked into your target directory.
 
+## Documentation
+
+The [repository README](https://github.com/samuelbharti/peacock) covers both
+packages, and the [R reference](https://www.samuelbharti.com/peacock/r/)
+documents every scaffold in full. A Python documentation page is
+[open](https://github.com/samuelbharti/peacock/issues/45).
+
 ## License
 
-MIT
+MIT. See [LICENSE](https://github.com/samuelbharti/peacock/blob/main/LICENSE).
