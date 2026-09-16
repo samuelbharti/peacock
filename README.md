@@ -26,7 +26,7 @@ Python, from this repository:
 pip install "peacock-init @ git+https://github.com/samuelbharti/peacock#subdirectory=pkg-py"
 ```
 
-## A first project
+## Usage
 
 In R:
 
@@ -51,7 +51,7 @@ peacock templates
 Every scaffold writes ordinary files. Delete what you do not want and edit the
 rest.
 
-## What it makes
+## Scaffolds
 
 | Function | Project |
 | --- | --- |
