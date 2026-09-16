@@ -5,6 +5,9 @@ on:
 name: release-py
 
 permissions:
+  # A permissions block replaces the defaults rather than adding to them,
+  # so contents has to be named or actions/checkout cannot read the repo.
+  contents: read
   id-token: write
 
 defaults:
