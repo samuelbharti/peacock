@@ -82,10 +82,10 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Install from GitHub:</p>
+<p>The package sits in <code>pkg-r/</code>, not at the root of the repository, so the path needs that suffix:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"samuelbharti/peacock"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"samuelbharti/peacock/pkg-r"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="what-can-peacock-do">What can peacock do?<a class="anchor" aria-label="anchor" href="#what-can-peacock-do"></a>
@@ -260,7 +260,7 @@
 <ul class="list-unstyled">
 <li><a href="https://github.com/samuelbharti/peacock/actions/workflows/r.yaml" class="external-link"><img src="https://github.com/samuelbharti/peacock/actions/workflows/r.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
-<li><a href="https://doi.org/10.5281/zenodo.21350436" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21350436.svg" alt="DOI"></a></li>
+<li><a href="https://doi.org/10.5281/zenodo.21350436" class="external-link"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21350436-1682D4" alt="DOI"></a></li>
 </ul>
 </div>
 
