@@ -169,4 +169,3 @@ Once installed, peacock adds an RStudio Add-in for quick access:
 ## License
 
 MIT © Samuel Bharti
-
