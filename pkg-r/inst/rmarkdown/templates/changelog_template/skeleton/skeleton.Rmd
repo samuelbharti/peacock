@@ -17,6 +17,5 @@ print(paste0("Last updated: ",Sys.time()))
 YYYY-MM-DD John Doe
 
 -   Big Change 1
--   Another Change 2 
-- 
-
+-   Another Change 2
+-

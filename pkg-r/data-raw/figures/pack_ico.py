@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Pack PNG files into a multi-size .ico (PNG-compressed entries).
 Usage: python pack_ico.py out.ico a.png b.png ..."""
-import struct, sys
+
+import struct
+import sys
 
 out = sys.argv[1]
 pngs = sys.argv[2:]
@@ -14,7 +16,7 @@ for p in pngs:
     imgs.append((w, h, data))
 
 n = len(imgs)
-header = struct.pack("<HHH", 0, 1, n)      # reserved, type=icon, count
+header = struct.pack("<HHH", 0, 1, n)  # reserved, type=icon, count
 offset = 6 + 16 * n
 entries = b""
 blob = b""
