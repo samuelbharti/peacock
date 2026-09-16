@@ -7,32 +7,32 @@ library(peacock)
 
 ## Introduction
 
-peacock is a simple package that helps you start new R projects quickly.
-Instead of manually creating folders and files every time, peacock sets
-them up for you with sensible defaults.
+peacock is a simple package that helps you start new projects quickly,
+in R, Quarto or Python. Instead of manually creating folders and files
+every time, peacock sets them up for you with sensible defaults.
 
 This guide shows you how to use each function in the package.
 
-## Core Philosophy
-
-peacock follows three principles:
-
-1.  **Start fast** - Get a working project structure in seconds
-2.  **Stay organized** - Pre-configured folders keep your work tidy
-3.  **Work your way** - Modify templates to fit your workflow
-
 ## Function Overview
 
-peacock provides four main functions:
+peacock exports eight functions:
 
 - [`init_shiny()`](https://www.samuelbharti.com/peacock/r/reference/init_shiny.md) -
   Create a Shiny app structure
+- [`init_analysis()`](https://www.samuelbharti.com/peacock/r/reference/init_analysis.md) -
+  Scaffold a reproducible analysis project
+- [`init_quarto()`](https://www.samuelbharti.com/peacock/r/reference/init_quarto.md) -
+  Scaffold a Quarto project
+- [`init_python()`](https://www.samuelbharti.com/peacock/r/reference/init_python.md) -
+  Scaffold a Python project
 - [`init_template()`](https://www.samuelbharti.com/peacock/r/reference/init_template.md) -
-  Pull GitHub project templates
+  Pull a GitHub repository in as a template
+- [`tool_review_template()`](https://www.samuelbharti.com/peacock/r/reference/tool_review_template.md) -
+  Set up a tool comparison project
 - [`init_changelog_md()`](https://www.samuelbharti.com/peacock/r/reference/init_changelog_md.md) -
   Add a changelog file
-- [`tool_review_template()`](https://www.samuelbharti.com/peacock/r/reference/tool_review_template.md) -
-  Set up tool comparison projects
+- [`peacock_templates()`](https://www.samuelbharti.com/peacock/r/reference/peacock_templates.md) -
+  List the built-in templates
 
 ## Setting up a Shiny App
 
@@ -106,10 +106,11 @@ directory. The function automatically cleans up temporary files.
 
 ### Available templates
 
-Currently includes:
-
-- `"shiny"` - Full-featured Shiny application template
-- `"cgds"` - Research project template from UAB CGDS
+[`peacock_templates()`](https://www.samuelbharti.com/peacock/r/reference/peacock_templates.md)
+lists the built-in registry, which includes `"shiny"` for a full Shiny
+application and `"cgds"` for the UAB CGDS research layout. Any
+`"owner/repo"` works too, optionally pinned with `@ref`, so the registry
+is a shortcut rather than a limit.
 
 ## Tracking Changes
 
@@ -131,30 +132,34 @@ This creates `CHANGELOG.md` with this structure:
 
     * Big Change 1
     * Another Change 2
+    ```
 
+Replace the template content with your actual changes. This is helpful
+for:
 
-    Replace the template content with your actual changes. This is helpful for:
+- Documenting what you did and when
+- Sharing progress with collaborators
+- Remembering why you made certain decisions
 
-    - Documenting what you did and when
-    - Sharing progress with collaborators
-    - Remembering why you made certain decisions
+## Comparing Multiple Tools
 
-    ## Comparing Multiple Tools
+When you need to evaluate several tools or methods,
+[`tool_review_template()`](https://www.samuelbharti.com/peacock/r/reference/tool_review_template.md)
+creates an organized structure.
 
-    When you need to evaluate several tools or methods, `tool_review_template()` creates an organized structure.
+``` r
 
-
-    ``` r
-    # Compare three bioinformatics tools
-    tool_review_template(
-      tool_name = c("STAR", "HISAT2", "Salmon"),
-      tool_url = c(
-        "https://github.com/alexdobin/STAR",
-        "http://daehwankimlab.github.io/hisat2/",
-        "https://github.com/COMBINE-lab/salmon"
-      ),
-      path = "~/research/rna_seq_comparison"
-    )
+# Compare three bioinformatics tools
+tool_review_template(
+  tool_name = c("STAR", "HISAT2", "Salmon"),
+  tool_url = c(
+    "https://github.com/alexdobin/STAR",
+    "http://daehwankimlab.github.io/hisat2/",
+    "https://github.com/COMBINE-lab/salmon"
+  ),
+  path = "~/research/rna_seq_comparison"
+)
+```
 
 ### What gets created?
 
@@ -289,4 +294,4 @@ Now that you know how peacock works:
 4.  Use peacock to start your next real project
 
 For more examples and updates, visit:
-<http://www.samuelbharti.com/peacock/>
+<https://www.samuelbharti.com/peacock/r/>

@@ -74,41 +74,36 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p>peacock is a simple package that helps you start new R projects
-quickly. Instead of manually creating folders and files every time,
-peacock sets them up for you with sensible defaults.</p>
+<p>peacock is a simple package that helps you start new projects
+quickly, in R, Quarto or Python. Instead of manually creating folders
+and files every time, peacock sets them up for you with sensible
+defaults.</p>
 <p>This guide shows you how to use each function in the package.</p>
-</div>
-<div class="section level2">
-<h2 id="core-philosophy">Core Philosophy<a class="anchor" aria-label="anchor" href="#core-philosophy"></a>
-</h2>
-<p>peacock follows three principles:</p>
-<ol style="list-style-type: decimal">
-<li>
-<strong>Start fast</strong> - Get a working project structure in
-seconds</li>
-<li>
-<strong>Stay organized</strong> - Pre-configured folders keep your
-work tidy</li>
-<li>
-<strong>Work your way</strong> - Modify templates to fit your
-workflow</li>
-</ol>
 </div>
 <div class="section level2">
 <h2 id="function-overview">Function Overview<a class="anchor" aria-label="anchor" href="#function-overview"></a>
 </h2>
-<p>peacock provides four main functions:</p>
+<p>peacock exports eight functions:</p>
 <ul>
 <li>
 <code><a href="../reference/init_shiny.html">init_shiny()</a></code> - Create a Shiny app structure</li>
 <li>
-<code><a href="../reference/init_template.html">init_template()</a></code> - Pull GitHub project templates</li>
+<code><a href="../reference/init_analysis.html">init_analysis()</a></code> - Scaffold a reproducible analysis
+project</li>
+<li>
+<code><a href="../reference/init_quarto.html">init_quarto()</a></code> - Scaffold a Quarto project</li>
+<li>
+<code><a href="../reference/init_python.html">init_python()</a></code> - Scaffold a Python project</li>
+<li>
+<code><a href="../reference/init_template.html">init_template()</a></code> - Pull a GitHub repository in as a
+template</li>
+<li>
+<code><a href="../reference/tool_review_template.html">tool_review_template()</a></code> - Set up a tool comparison
+project</li>
 <li>
 <code><a href="../reference/init_changelog_md.html">init_changelog_md()</a></code> - Add a changelog file</li>
 <li>
-<code><a href="../reference/tool_review_template.html">tool_review_template()</a></code> - Set up tool comparison
-projects</li>
+<code><a href="../reference/peacock_templates.html">peacock_templates()</a></code> - List the built-in templates</li>
 </ul>
 </div>
 <div class="section level2">
@@ -176,13 +171,12 @@ files.</p>
 <div class="section level3">
 <h3 id="available-templates">Available templates<a class="anchor" aria-label="anchor" href="#available-templates"></a>
 </h3>
-<p>Currently includes:</p>
-<ul>
-<li>
-<code>"shiny"</code> - Full-featured Shiny application template</li>
-<li>
-<code>"cgds"</code> - Research project template from UAB CGDS</li>
-</ul>
+<p><code><a href="../reference/peacock_templates.html">peacock_templates()</a></code> lists the built-in registry, which
+includes <code>"shiny"</code> for a full Shiny application and
+<code>"cgds"</code> for the UAB CGDS research layout. Any
+<code>"owner/repo"</code> works too, optionally pinned with
+<code>@ref</code>, so the registry is a shortcut rather than a
+limit.</p>
 </div>
 </div>
 <div class="section level2">
@@ -200,30 +194,32 @@ files.</p>
 YYYY-MM-DD  John Doe
 
 * Big Change 1
-* Another Change 2</code></pre>
-<pre><code>
-Replace the template content with your actual changes. This is helpful for:
-
-- Documenting what you did and when
-- Sharing progress with collaborators
-- Remembering why you made certain decisions
-
-## Comparing Multiple Tools
-
-When you need to evaluate several tools or methods, `tool_review_template()` creates an organized structure.
-
-
-``` r
-# Compare three bioinformatics tools
-tool_review_template(
-  tool_name = c("STAR", "HISAT2", "Salmon"),
-  tool_url = c(
-    "https://github.com/alexdobin/STAR",
-    "http://daehwankimlab.github.io/hisat2/",
-    "https://github.com/COMBINE-lab/salmon"
-  ),
-  path = "~/research/rna_seq_comparison"
-)</code></pre>
+* Another Change 2
+```</code></pre>
+<p>Replace the template content with your actual changes. This is
+helpful for:</p>
+<ul>
+<li>Documenting what you did and when</li>
+<li>Sharing progress with collaborators</li>
+<li>Remembering why you made certain decisions</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="comparing-multiple-tools">Comparing Multiple Tools<a class="anchor" aria-label="anchor" href="#comparing-multiple-tools"></a>
+</h2>
+<p>When you need to evaluate several tools or methods,
+<code><a href="../reference/tool_review_template.html">tool_review_template()</a></code> creates an organized structure.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Compare three bioinformatics tools</span></span>
+<span><span class="fu"><a href="../reference/tool_review_template.html">tool_review_template</a></span><span class="op">(</span></span>
+<span>  tool_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"STAR"</span>, <span class="st">"HISAT2"</span>, <span class="st">"Salmon"</span><span class="op">)</span>,</span>
+<span>  tool_url <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"https://github.com/alexdobin/STAR"</span>,</span>
+<span>    <span class="st">"http://daehwankimlab.github.io/hisat2/"</span>,</span>
+<span>    <span class="st">"https://github.com/COMBINE-lab/salmon"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  path <span class="op">=</span> <span class="st">"~/research/rna_seq_comparison"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="what-gets-created-1">What gets created?<a class="anchor" aria-label="anchor" href="#what-gets-created-1"></a>
 </h3>
@@ -348,7 +344,7 @@ templates.</p>
 <li>Customize it for your needs</li>
 <li>Use peacock to start your next real project</li>
 </ol>
-<p>For more examples and updates, visit: <a href="http://www.samuelbharti.com/peacock/" class="external-link uri">http://www.samuelbharti.com/peacock/</a></p>
+<p>For more examples and updates, visit: <a href="https://www.samuelbharti.com/peacock/r/" class="uri">https://www.samuelbharti.com/peacock/r/</a></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
