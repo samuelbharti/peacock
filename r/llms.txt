@@ -1,30 +1,24 @@
 # peacock
 
-peacock helps you quickly set up new R projects with pre-configured
-directory structures and files. Stop creating the same folders and files
-manually every time you start a project. Just run a function and get
-working.
+peacock sets up a ready-to-work project directory in one call: the
+layout, the config files, and the agent guidance. It scaffolds R
+projects, and also Quarto and Python ones, so the same habit works
+across a mixed stack.
 
 ![One function scaffolds a ready-to-work project: init_shiny('my_app')
 creates ui.R, server.R, global.R, R/, www/ and an
 AGENTS.md](reference/figures/overview.png)
 
-## Why peacock?
-
-When starting a new project, you probably find yourself:
-
-- Creating the same folders over and over (data, scripts, outputs)
-- Setting up Shiny apps with the same basic structure
-- Writing boilerplate code for UI, server, and global files
-- Manually organizing files for reproducible research
-
-peacock automates this. It gives you clean, organized project templates
-so you can start coding immediately.
-
 ## Installation
 
-The package sits in `pkg-r/`, not at the root of the repository, so the
-path needs that suffix:
+From r-universe:
+
+``` r
+
+install.packages("peacock", repos = "https://samuelbharti.r-universe.dev")
+```
+
+Or the development version:
 
 ``` r
 
@@ -55,6 +49,9 @@ This creates:
 - `data/`, `R/`, `dev/` - Standard project folders
 - `Dockerfile` - Ready for containerization
 - `.gitignore` and `.Renviron` - Project configuration
+
+Set `confirm = FALSE` to skip the confirmation prompt, which is what you
+want in a script.
 
 ### 2. Create a changelog
 
@@ -158,25 +155,9 @@ Once installed, peacock adds an RStudio Add-in for quick access:
 - Or create a new project and select “Peacock: Shiny Template” from the
   templates
 
-## Quick start
-
-``` r
-
-library(peacock)
-
-# Create a new Shiny app in the current directory
-init_shiny()
-
-# Or specify a path
-init_shiny(path = "path/to/new/project", confirm = FALSE)
-```
-
-Set `confirm = FALSE` to skip the confirmation prompt (useful for
-scripting).
-
 ## Learn more
 
-- Full documentation: <http://www.samuelbharti.com/peacock/>
+- Full documentation: <https://www.samuelbharti.com/peacock/r/>
 - Vignette:
   [`vignette("introduction")`](https://www.samuelbharti.com/peacock/r/articles/introduction.md)
 - Issues and feedback: <https://github.com/samuelbharti/peacock/issues>

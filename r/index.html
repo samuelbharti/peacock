@@ -65,25 +65,16 @@
 </div>
 <!-- badges: start -->
 
-<p>peacock helps you quickly set up new R projects with pre-configured directory structures and files. Stop creating the same folders and files manually every time you start a project. Just run a function and get working.</p>
+<p>peacock sets up a ready-to-work project directory in one call: the layout, the config files, and the agent guidance. It scaffolds R projects, and also Quarto and Python ones, so the same habit works across a mixed stack.</p>
 <p><img src="reference/figures/overview.png" alt="One function scaffolds a ready-to-work project: init_shiny('my_app') creates ui.R, server.R, global.R, R/, www/ and an AGENTS.md" width="100%"></p>
-<div class="section level2">
-<h2 id="why-peacock">Why peacock?<a class="anchor" aria-label="anchor" href="#why-peacock"></a>
-</h2>
-<p>When starting a new project, you probably find yourself:</p>
-<ul>
-<li>Creating the same folders over and over (data, scripts, outputs)</li>
-<li>Setting up Shiny apps with the same basic structure</li>
-<li>Writing boilerplate code for UI, server, and global files</li>
-<li>Manually organizing files for reproducible research</li>
-</ul>
-<p>peacock automates this. It gives you clean, organized project templates so you can start coding immediately.</p>
-</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>The package sits in <code>pkg-r/</code>, not at the root of the repository, so the path needs that suffix:</p>
+<p>From r-universe:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"peacock"</span>, repos <span class="op">=</span> <span class="st">"https://samuelbharti.r-universe.dev"</span><span class="op">)</span></span></code></pre></div>
+<p>Or the development version:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"samuelbharti/peacock/pkg-r"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -94,7 +85,7 @@
 <h3 id="id_1-initialize-a-shiny-app-structure">1. Initialize a Shiny app structure<a class="anchor" aria-label="anchor" href="#id_1-initialize-a-shiny-app-structure"></a>
 </h3>
 <p>Creates a complete Shiny app with organized folders and starter files.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.samuelbharti.com/peacock/r/">peacock</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Set up a new Shiny project</span></span>
@@ -116,12 +107,13 @@
 <li>
 <code>.gitignore</code> and <code>.Renviron</code> - Project configuration</li>
 </ul>
+<p>Set <code>confirm = FALSE</code> to skip the confirmation prompt, which is what you want in a script.</p>
 </div>
 <div class="section level3">
 <h3 id="id_2-create-a-changelog">2. Create a changelog<a class="anchor" aria-label="anchor" href="#id_2-create-a-changelog"></a>
 </h3>
 <p>Track project changes in a structured markdown file.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/init_changelog_md.html">init_changelog_md</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_project"</span><span class="op">)</span></span></code></pre></div>
 <p>Creates a <code>CHANGELOG.md</code> file with a simple format for documenting your work.</p>
 </div>
@@ -129,7 +121,7 @@
 <h3 id="id_3-use-github-templates">3. Use GitHub templates<a class="anchor" aria-label="anchor" href="#id_3-use-github-templates"></a>
 </h3>
 <p>Pull down complete project templates from GitHub. Use a built-in name, or <strong>any</strong> GitHub repository as <code>"owner/repo"</code> (optionally pinned with <code>"owner/repo@ref"</code>).</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Built-in templates</span></span>
 <span><span class="fu"><a href="reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"shiny"</span>, path <span class="op">=</span> <span class="st">"my_project"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/init_template.html">init_template</a></span><span class="op">(</span><span class="st">"cgds"</span>, path <span class="op">=</span> <span class="st">"research_project"</span><span class="op">)</span></span>
@@ -146,7 +138,7 @@
 <h3 id="id_4-set-up-tool-review-projects">4. Set up tool review projects<a class="anchor" aria-label="anchor" href="#id_4-set-up-tool-review-projects"></a>
 </h3>
 <p>Organize projects that compare multiple tools or methods.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tool_review_template.html">tool_review_template</a></span><span class="op">(</span></span>
 <span>  tool_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"tool1"</span>, <span class="st">"tool2"</span>, <span class="st">"tool3"</span><span class="op">)</span>,</span>
 <span>  tool_url <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://tool1.com"</span>, <span class="st">"https://tool2.com"</span>, <span class="st">"https://tool3.com"</span><span class="op">)</span>,</span>
@@ -158,7 +150,7 @@
 <h3 id="id_5-scaffold-a-reproducible-analysis-project">5. Scaffold a reproducible analysis project<a class="anchor" aria-label="anchor" href="#id_5-scaffold-a-reproducible-analysis-project"></a>
 </h3>
 <p>Set up a tidy layout for a data-analysis or research project.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/init_analysis.html">init_analysis</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_study"</span><span class="op">)</span></span></code></pre></div>
 <p>Creates <code>data/{raw,processed}</code>, <code>R/</code>, <code>analysis/</code> (with a starter Quarto notebook), and <code>output/{figures,tables}</code>, plus a README and <code>.gitignore</code>.</p>
 </div>
@@ -166,7 +158,7 @@
 <h3 id="id_6-scaffold-a-quarto-project">6. Scaffold a Quarto project<a class="anchor" aria-label="anchor" href="#id_6-scaffold-a-quarto-project"></a>
 </h3>
 <p>Create a Quarto website, book, or manuscript.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/init_quarto.html">init_quarto</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_site"</span>, type <span class="op">=</span> <span class="st">"website"</span><span class="op">)</span></span></code></pre></div>
 <p><code>type</code> can be <code>"website"</code> (default), <code>"book"</code>, or <code>"manuscript"</code>; each gets a <code>_quarto.yml</code> and starter documents.</p>
 </div>
@@ -174,7 +166,7 @@
 <h3 id="id_7-scaffold-a-python-project">7. Scaffold a Python project<a class="anchor" aria-label="anchor" href="#id_7-scaffold-a-python-project"></a>
 </h3>
 <p>peacock stays an R package, but it can emit a Python project too.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/init_python.html">init_python</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"my_pkg"</span><span class="op">)</span></span></code></pre></div>
 <p>Creates a src-layout package with <code>pyproject.toml</code> (ruff + pytest), a starter module and test, <code>.gitignore</code>, and <code>AGENTS.md</code>.</p>
 </div>
@@ -194,23 +186,10 @@
 </ul>
 </div>
 <div class="section level2">
-<h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
-</h2>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.samuelbharti.com/peacock/r/">peacock</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Create a new Shiny app in the current directory</span></span>
-<span><span class="fu"><a href="reference/init_shiny.html">init_shiny</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Or specify a path</span></span>
-<span><span class="fu"><a href="reference/init_shiny.html">init_shiny</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"path/to/new/project"</span>, confirm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p>Set <code>confirm = FALSE</code> to skip the confirmation prompt (useful for scripting).</p>
-</div>
-<div class="section level2">
 <h2 id="learn-more">Learn more<a class="anchor" aria-label="anchor" href="#learn-more"></a>
 </h2>
 <ul>
-<li>Full documentation: <a href="http://www.samuelbharti.com/peacock/" class="external-link uri">http://www.samuelbharti.com/peacock/</a>
+<li>Full documentation: <a href="https://www.samuelbharti.com/peacock/r/" class="uri">https://www.samuelbharti.com/peacock/r/</a>
 </li>
 <li>Vignette: <code><a href="articles/introduction.html">vignette("introduction")</a></code>
 </li>
@@ -258,9 +237,11 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/samuelbharti/peacock/actions/workflows/r.yaml" class="external-link"><img src="https://github.com/samuelbharti/peacock/actions/workflows/r.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://samuelbharti.r-universe.dev/peacock" class="external-link"><img src="https://samuelbharti.r-universe.dev/badges/peacock" alt="r-universe"></a></li>
+<li><a href="https://github.com/samuelbharti/peacock/actions/workflows/r.yaml" class="external-link"><img src="https://github.com/samuelbharti/peacock/actions/workflows/r.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://doi.org/10.5281/zenodo.21350436" class="external-link"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21350436-1682D4" alt="DOI"></a></li>
+<li><a href="https://github.com/samuelbharti/peacock/blob/main/LICENSE" class="external-link"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a></li>
 </ul>
 </div>
 
