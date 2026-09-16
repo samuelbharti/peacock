@@ -4,7 +4,7 @@
   <text x="620" y="62" font-family="'Segoe UI','Inter',system-ui,sans-serif" font-size="26" font-weight="700"
         fill="#1B2A63" text-anchor="middle">One function, a ready-to-work project</text>
   <circle cx="508" cy="80" r="2.2" fill="#B4841F"/><circle cx="524" cy="80" r="2.2" fill="#B4841F"/><circle cx="540" cy="80" r="2.2" fill="#B4841F"/><circle cx="556" cy="80" r="2.2" fill="#B4841F"/><circle cx="572" cy="80" r="2.2" fill="#B4841F"/><circle cx="588" cy="80" r="2.2" fill="#B4841F"/><circle cx="604" cy="80" r="2.2" fill="#B4841F"/><circle cx="620" cy="80" r="2.2" fill="#B4841F"/><circle cx="636" cy="80" r="2.2" fill="#B4841F"/><circle cx="652" cy="80" r="2.2" fill="#B4841F"/><circle cx="668" cy="80" r="2.2" fill="#B4841F"/><circle cx="684" cy="80" r="2.2" fill="#B4841F"/><circle cx="700" cy="80" r="2.2" fill="#B4841F"/><circle cx="716" cy="80" r="2.2" fill="#B4841F"/><circle cx="732" cy="80" r="2.2" fill="#B4841F"/>
-  
+
   <rect x="64" y="96" width="470" height="248" rx="16" fill="#161F52"/>
   <circle cx="92" cy="126" r="6" fill="#E7B24B"/>
   <circle cx="112" cy="126" r="6" fill="#38C0A6"/>
@@ -23,7 +23,7 @@
   <text x="96" y="292" font-family="'Consolas','JetBrains Mono','SFMono-Regular',monospace" font-size="20"
         fill="#8E86A8">#&gt; <tspan fill="#38C0A6">&#10003;</tspan> created my_app/</text>
 
-  
+
   <text x="621" y="178" font-family="'Segoe UI','Inter',system-ui,sans-serif" font-size="18"
         fill="#1B2A63" text-anchor="middle" font-weight="600"
         letter-spacing="0.5">scaffolds</text>
@@ -31,7 +31,7 @@
         stroke-width="5" stroke-linecap="round"/>
   <path d="M 672,195 L 690,204 L 672,213 Z" fill="#B4841F"/>
 
-  
+
   <rect x="706" y="96" width="470" height="248" rx="16" fill="#FFFFFF"
         stroke="#DDC99C" stroke-width="1.5"/>
   <rect x="734" y="122" width="18" height="14" rx="2.5" fill="#B4841F"/>
