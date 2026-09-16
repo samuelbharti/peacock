@@ -20,26 +20,22 @@ library(peacock)
 
 ## Introduction
 
-peacock is a simple package that helps you start new R projects quickly. Instead of manually creating folders and files every time, peacock sets them up for you with sensible defaults.
+peacock is a simple package that helps you start new projects quickly, in R, Quarto or Python. Instead of manually creating folders and files every time, peacock sets them up for you with sensible defaults.
 
 This guide shows you how to use each function in the package.
 
-## Core Philosophy
-
-peacock follows three principles:
-
-1. **Start fast** - Get a working project structure in seconds
-2. **Stay organized** - Pre-configured folders keep your work tidy
-3. **Work your way** - Modify templates to fit your workflow
-
 ## Function Overview
 
-peacock provides four main functions:
+peacock exports eight functions:
 
 - `init_shiny()` - Create a Shiny app structure
-- `init_template()` - Pull GitHub project templates
+- `init_analysis()` - Scaffold a reproducible analysis project
+- `init_quarto()` - Scaffold a Quarto project
+- `init_python()` - Scaffold a Python project
+- `init_template()` - Pull a GitHub repository in as a template
+- `tool_review_template()` - Set up a tool comparison project
 - `init_changelog_md()` - Add a changelog file
-- `tool_review_template()` - Set up tool comparison projects
+- `peacock_templates()` - List the built-in templates
 
 ## Setting up a Shiny App
 
@@ -110,10 +106,10 @@ This downloads the template, extracts it, and sets it up in your chosen director
 
 ### Available templates
 
-Currently includes:
-
-- `"shiny"` - Full-featured Shiny application template
-- `"cgds"` - Research project template from UAB CGDS
+`peacock_templates()` lists the built-in registry, which includes `"shiny"` for a
+full Shiny application and `"cgds"` for the UAB CGDS research layout. Any
+`"owner/repo"` works too, optionally pinned with `@ref`, so the registry is a
+shortcut rather than a limit.
 
 ## Tracking Changes
 
@@ -126,7 +122,7 @@ init_changelog_md(path = "~/my_project")
 
 This creates `CHANGELOG.md` with this structure:
 
-```
+````
 # CHANGELOG
 
 ``` txt
@@ -135,7 +131,7 @@ YYYY-MM-DD  John Doe
 * Big Change 1
 * Another Change 2
 ```
-```
+````
 
 Replace the template content with your actual changes. This is helpful for:
 
@@ -281,4 +277,4 @@ Now that you know how peacock works:
 3. Customize it for your needs
 4. Use peacock to start your next real project
 
-For more examples and updates, visit: http://www.samuelbharti.com/peacock/
+For more examples and updates, visit: https://www.samuelbharti.com/peacock/r/
